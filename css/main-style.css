@@ -831,10 +831,21 @@ body a::selection {
   color: white;
   font-weight: 900;
   letter-spacing: 0.45px;
-  font-size: 5vw;
+  font-size: 5rem;
   line-height: 2;
   width: 100%;
   text-align: center;
+}
+
+.jobs__job-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: fit-content(1em);
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 1.5rem;
 }
 
 .jobs__item {
@@ -932,6 +943,7 @@ body a::selection {
   color: white;
   outline: none;
   text-decoration: none;
+  background: transparent;
 }
 
 .jobs__btn:hover .jobs__btn-text {
@@ -942,5 +954,11 @@ body a::selection {
   opacity: 1;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.jobs__btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=main-style.css.map */

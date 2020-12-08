@@ -753,10 +753,18 @@ body {
         color: white;
         font-weight: 900;
         letter-spacing: 0.45px;
-        font-size: 5vw;
+        font-size: $fontSizeH1sub;
         line-height: 2;
         width: 100%;
         text-align: center;
+    }
+
+    &__job-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: fit-content(1em);
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
     }
 
     &__item {
@@ -843,6 +851,7 @@ body {
             color: white;
             outline: none;
             text-decoration: none;
+            background: transparent;
 
             .jobs__btn-text {
                 color: white;
@@ -853,7 +862,11 @@ body {
                 transform: scale(1.1);
 
             }
+        }
 
+        &:focus {
+            outline: none;
+            box-shadow: none;
         }
 
     }

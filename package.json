@@ -16,10 +16,12 @@
   "bugs": {
     "url": "https://github.com/Voidereles/TransportSite/issues"
   },
-  "homepage": "https://github.com/Voidereles/TransportSite#readme",
+  "homepage": "http://voidereles.github.io/TransportSite",
   "dependencies": {
     "animate.css": "^4.1.1",
+    "postcss": "^8.2.0",
     "sticky-js": "^1.3.0",
+    "stickybits": "^3.7.7",
     "wow": "^0.0.3",
     "wow.js": "^1.2.2"
   },
