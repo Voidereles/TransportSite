@@ -40,6 +40,9 @@ $('.offer__carousel').owlCarousel({
         },
         // breakpoint from 768 up
         768: {
+            items: 3,
+        },
+        1200: {
             items: 4,
         }
     },
