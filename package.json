@@ -1,0 +1,29 @@
+{
+  "name": "TransportSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Voidereles/TransportSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Voidereles/TransportSite/issues"
+  },
+  "homepage": "https://github.com/Voidereles/TransportSite#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "sticky-js": "^1.3.0",
+    "wow": "^0.0.3",
+    "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "stickybits": "^3.7.7"
+  }
+}
