@@ -450,7 +450,7 @@ body a::selection {
 .intro__heading {
   font-weight: 900;
   color: white;
-  font-size: 5rem;
+  font-size: 4.8rem;
   position: relative;
   z-index: 2;
   font-size: 6.625rem;
@@ -473,7 +473,7 @@ body a::selection {
 }
 
 .intro__heading--company-name {
-  font-size: 5rem;
+  font-size: 4.8rem;
   display: block;
 }
 
@@ -556,6 +556,7 @@ body a::selection {
 
 .about {
   color: white;
+  margin-top: 25vh;
 }
 
 .about__container-helper {
@@ -569,6 +570,11 @@ body a::selection {
   padding: 1.5rem;
 }
 
+.about__heading, .about__subheading {
+  position: relative;
+  z-index: 2;
+}
+
 .about__carousel .owl-stage-outer {
   border-radius: 15px;
 }
@@ -579,11 +585,18 @@ body a::selection {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about__carousel .owl-dots .owl-dot {
   border-radius: 10px;
-  width: 3rem;
+  width: 15%;
   height: 1rem;
   background: black;
   margin: 0 0.25rem;
@@ -641,7 +654,7 @@ body a::selection {
 
 .offer__text-container {
   background: #111111;
-  background: linear-gradient(45deg, #111111 -40%, #2216af 200%);
+  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
   border-radius: 15px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -693,6 +706,14 @@ body a::selection {
   position: relative;
   background: #000;
   background-clip: padding-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 312px;
 }
 
 .offer__carousel-link::before {
@@ -710,7 +731,7 @@ body a::selection {
   background: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(45deg, #111111 -40%, #2216af 200%);
+  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
 }
 
 .offer__carousel-link:hover {
@@ -759,6 +780,7 @@ body a::selection {
   border-radius: 10px;
   overflow: hidden;
   transition: 0.3s;
+  margin-top: auto;
 }
 
 .offer__carousel-btn-text {
@@ -778,7 +800,7 @@ body a::selection {
   position: absolute;
   left: 0;
   border-radius: 10px;
-  background: linear-gradient(45deg, #111111 -40%, #2216af 200%);
+  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -804,6 +826,7 @@ body a::selection {
   position: relative;
   height: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   background: linear-gradient(45deg, #111111 0%, #2216af 50%);
 }
 
@@ -831,7 +854,7 @@ body a::selection {
   color: white;
   font-weight: 900;
   letter-spacing: 0.45px;
-  font-size: 5rem;
+  font-size: 4.8rem;
   line-height: 2;
   width: 100%;
   text-align: center;
@@ -840,8 +863,8 @@ body a::selection {
 .jobs__job-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-auto-rows: fit-content(1em);
   -webkit-column-gap: 1.5rem;
           column-gap: 1.5rem;
@@ -858,6 +881,13 @@ body a::selection {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .jobs__item:hover {
@@ -912,6 +942,7 @@ body a::selection {
   overflow: hidden;
   transition: 0.3s;
   background: white;
+  margin-top: auto;
 }
 
 .jobs__btn-text {
@@ -933,7 +964,7 @@ body a::selection {
   position: absolute;
   left: 0;
   border-radius: 10px;
-  background: linear-gradient(45deg, #111111 -40%, #2216af 200%);
+  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -960,6 +991,71 @@ body a::selection {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.documents {
+  color: white;
+  margin-top: 25vh;
+}
+
+.documents__text-container {
+  background: #111111;
+  background: linear-gradient(350deg, #BB231B -80%, #2216af 100%);
+  border-radius: 15px;
+  min-height: 30vh;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.documents__heading-svg {
+  width: 30rem;
+  height: 30rem;
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+}
+
+.documents__table-container .table thead th,
+.documents__table-container .table td,
+.documents__table-container .table th {
+  border-color: white;
+  color: white;
+  padding: 0.75rem 1.25rem;
+}
+
+.documents__table-container .table thead tr th:first-child {
+  width: 10px;
+}
+
+.documents__table-container .table thead tr th:last-child {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .jobs__img {
+    min-height: 30vh;
+    max-height: 50vh;
+  }
+  .jobs__img::before {
+    background-position: center 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs__img {
+    max-height: 50vh;
+  }
 }
 
 
