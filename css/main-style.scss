@@ -43,9 +43,6 @@ $maxWidthL: 1096px;
 $spaceOuter: 64px;
 $spaceXS: 4px;
 $spaceS: 8px;
-
-@media (max-width:1200px) {}
-
 $spaceM: 16px;
 $spaceL: 24px;
 $spaceXL: 32px;
@@ -77,12 +74,14 @@ body {
     font-family: $fontStack;
     font-weight: $fontWeightRegular;
     font-synthesis: none;
-    color: white;
+    // color: white;
     border: 0;
     margin: 0;
     overflow-x: hidden;
     position: relative;
-    background-color: black;
+    // background-color: black;
+    background: white;
+    color: black;
 
     h1,
     h2,
@@ -116,22 +115,40 @@ body {
 
     .container-fluid {
         position: relative;
-        background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+
+        background: transparent;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        animation: leftToRight 0.75s forwards;
+        // animation: leftToRight 0.75s forwards;
+        transform: translateY(-100px);
+        opacity: 0;
+        animation: topToBottom 0.75s forwards 0.75s;
+        transition: 0.3s;
+
 
         &::before {
             content: '';
             display: block;
             position: absolute;
             top: 0;
-            left: -500%;
-            width: 500%;
+            left: 0;
+            width: 100%;
             height: 100%;
             border-radius: 10px;
+            background: linear-gradient(45deg, #BB231BFF 0%, #2216afFF 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: 0.5s;
+            opacity: 0;
         }
+
+        &.scrolled {
+            &::before {
+                // top: 0;
+                opacity: 1;
+            }
+        }
+
+
 
     }
 
@@ -163,7 +180,7 @@ body {
 
             path,
             rect {
-                fill: #FA709A;
+                fill: white;
             }
         }
     }
@@ -309,7 +326,8 @@ body {
 
 .main {
     // margin-top: calc(1rem + 72px + 1rem);
-    margin-top: calc(1.5rem + 72px);
+    // margin-top: 1.5rem;
+    // margin-top: calc(1.5rem + 72px);
 }
 
 @keyframes introBackground {
@@ -354,6 +372,18 @@ body {
     }
 }
 
+@keyframes topToBottom {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes scaleAndOpacity {
     from {
         opacity: 0;
@@ -369,22 +399,98 @@ body {
 .intro {
     position: relative;
     transition: 0.7s;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
+    // border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    // display: flex;
+    // justify-content: center;
+    width: 100%;
+    // .container-fluid {
+    position: relative;
+    height: 100vh;
+    // background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+    // margin: 0 1rem;
+    // left: -50%;
+    // width: 150%;
+    right: -150%;
+    animation: rightToLeft 0.75s forwards;
+    // padding-left: 50%;
 
-    .container-fluid {
-        position: relative;
-        height: calc(100vh - 72px - 2.5rem);
-        background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+    // &::before {
+    //     content: '';
+    //     width: 100%;
+    //     height: 100%;
+    //     left: 0;
+    //     top: 0;
+    //     content: '';
+    //     opacity: 0.6;
+    //     z-index: 0;
+    //     position: absolute;
+    //     background: url('../images/ship.jpeg');
+    //     background-size: cover;
+    //     background-position: bottom left;
+    //     // border-radius: 15px;
+    //     border-bottom-left-radius: 15px;
+    //     border-bottom-right-radius: 15px;
+    //     // animation: introBackground 2s forwards;
+    // }
+
+    // }
+
+
+    &__carousel {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .owl-stage-outer {
+            border-radius: 15px;
+            height: 100%;
+
+            .owl-stage {
+                height: 100%;
+            }
+        }
+
+        .owl-dots {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .owl-dot {
+                border-radius: 10px;
+                width: 15%;
+                height: 1rem;
+                background: black;
+                margin: 0 0.25rem;
+
+                &:focus {
+                    outline: none;
+                    border: none;
+                }
+
+                &.active {
+                    background: linear-gradient(45deg, rgb(17, 17, 17) 0%, $darkRed 100%);
+                }
+            }
+        }
+    }
+
+
+    &__img {
         border-radius: 15px;
-        margin: 0 1rem;
-        // left: -50%;
-        // width: 150%;
-        right: -150%;
-        animation: rightToLeft 0.75s forwards;
-        animation-delay: 1s;
-        // padding-left: 50%;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: linear-gradient(45deg, $darkRed 30%, $darkGrey 100%);
 
         &::before {
             content: '';
@@ -394,15 +500,30 @@ body {
             top: 0;
             content: '';
             opacity: 0.6;
+            filter: brightness(110%);
             z-index: 0;
             position: absolute;
+            background: url('../images/logistics-people.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+        }
+
+        &-2::before {
             background: url('../images/ship.jpeg');
             background-size: cover;
-            background-position: bottom left;
-            border-radius: 15px;
-            // animation: introBackground 2s forwards;
+            background-position: center;
         }
     }
+
+    .container-fluid {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
 
     &__heading {
         font-weight: 900;
@@ -595,7 +716,8 @@ body {
     color: white;
 
     &__text-container {
-        background: $darkGrey;
+        // background: $darkGrey;
+        background: white;
         background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
         border-radius: 15px;
         min-height: 30vh;
@@ -613,12 +735,19 @@ body {
         position: absolute;
         top: -4rem;
         right: 1rem;
+
+        path,
+        circle,
+        rect {
+            fill: white;
+        }
     }
 
     &__carousel {
         .owl-item.active {
             .offer__carousel-link {
-                color: white;
+                // color: white;
+                color: black;
                 outline: none;
                 text-decoration: none;
 
@@ -663,13 +792,15 @@ body {
         }
 
         &-link {
-            color: white;
+            // color: white;
+            color: black;
             border: 4px solid transparent;
             border-radius: 10px;
             transition: 0.3s;
             padding: 1.5rem;
             position: relative;
-            background: #000;
+            // background: #000;
+            background: white;
             background-clip: padding-box;
             display: flex;
             flex-direction: column;
@@ -718,13 +849,15 @@ body {
             width: 100%;
 
             path {
-                stroke: white;
+                // stroke: white;
+                stroke: black;
             }
         }
 
         &-item-title {
             text-align: center;
-            color: white;
+            // color: white;
+            color: black;
             outline: none;
             text-decoration: none;
         }
@@ -942,7 +1075,7 @@ body {
 .documents {
     color: white;
     margin-top: $section-margin;
-    ;
+
 
     &__text-container {
         background: $darkGrey;
@@ -963,6 +1096,12 @@ body {
         position: absolute;
         top: 0rem;
         right: 1rem;
+
+        path,
+        rect,
+        circle {
+            fill: white;
+        }
     }
 
     &__table-container {
@@ -1084,6 +1223,7 @@ body {
     border-radius: 15px;
     display: flex;
     justify-content: center;
+    color: white;
 
     .container-fluid {
         position: relative;
@@ -1124,6 +1264,9 @@ body {
     &__heading {
         font-weight: 700;
         letter-spacing: 0.45px;
+        color: white;
+        position: relative;
+        z-index: 2;
     }
 
     &__subheading {
@@ -1202,6 +1345,9 @@ body {
     }
 
     &__info {
+        position: relative;
+        z-index: 2;
+
         a {
             color: $darkRed;
             position: relative;
@@ -1236,8 +1382,10 @@ body {
 .footer {
     display: flex;
     justify-content: center;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     background: $darkGrey;
+    color: white;
 
     .container-fluid {
         border-radius: 15px;

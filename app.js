@@ -9,6 +9,17 @@ new WOW().init();
 
 var stickybit = stickybits(".sticky-selector");
 
+$('.intro__carousel').owlCarousel({
+    loop: true,
+    dots: true,
+    lazyLoad: true,
+    margin: 0,
+    responsiveClass: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    items: 1
+});
+
 $('.about__carousel').owlCarousel({
     loop: true,
     dots: true,
@@ -54,6 +65,7 @@ function headerOnScroll() {
         console.log('dasd');
         let currentScrollPos = window.pageYOffset;
         if (this.window.pageYOffset > 105) {
+            $('.header .container-fluid').addClass('scrolled');
 
 
             if (prevScrollpos > currentScrollPos) {
@@ -62,6 +74,8 @@ function headerOnScroll() {
                 document.getElementById("header").style.top = "-145px";
             }
             prevScrollpos = currentScrollPos;
+        } else {
+            $('.header .container-fluid').removeClass('scrolled');
         }
     }
 }

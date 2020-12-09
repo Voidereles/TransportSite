@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../AppData/Roaming/npm-cache/_npx/22404/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../AppData/Roaming/npm-cache/_npx/5280/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../AppData/Roaming/npm-cache/_npx/22404/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../AppData/Roaming/npm-cache/_npx/5280/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/22404/node_modules/parcel/src/builtins/bundle-url.js"}],"css/main-style.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/5280/node_modules/parcel/src/builtins/bundle-url.js"}],"css/main-style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\ship.jpeg":[["ship.006159e2.jpeg","images/ship.jpeg"],"images/ship.jpeg"],"./..\\images\\logistics-people.jpg":[["logistics-people.eac0e426.jpg","images/logistics-people.jpg"],"images/logistics-people.jpg"],"./..\\images\\shake-hand.jpeg":[["shake-hand.49268da0.jpeg","images/shake-hand.jpeg"],"images/shake-hand.jpeg"],"./..\\images\\news.jpg":[["news.ad6808ae.jpg","images/news.jpg"],"images/news.jpg"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/22404/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/22404/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\images\\logistics-people.jpg":[["logistics-people.eac0e426.jpg","images/logistics-people.jpg"],"images/logistics-people.jpg"],"./..\\images\\ship.jpeg":[["ship.006159e2.jpeg","images/ship.jpeg"],"images/ship.jpeg"],"./..\\images\\shake-hand.jpeg":[["shake-hand.49268da0.jpeg","images/shake-hand.jpeg"],"images/shake-hand.jpeg"],"./..\\images\\news.jpg":[["news.ad6808ae.jpg","images/news.jpg"],"images/news.jpg"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/5280/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/5280/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54019" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61405" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/22404/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/5280/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/main-style.c47a6225.js.map
