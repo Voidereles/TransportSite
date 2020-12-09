@@ -64,6 +64,7 @@ body a::selection {
 }
 
 .header {
+  position: fixed;
   z-index: 1024;
   width: 100%;
   display: -webkit-box;
@@ -132,9 +133,9 @@ body a::selection {
 }
 
 .header .nav-toggle {
-  position: fixed;
   top: 1rem;
   right: 2.5rem;
+  margin-right: 1rem;
   z-index: 1024;
   display: none;
   background: none;
@@ -147,8 +148,8 @@ body a::selection {
 }
 
 .header .nav-toggle svg {
-  color: rgba(255, 255, 255, 0.8);
-  fill: rgba(255, 255, 255, 0.8);
+  color: white;
+  fill: white;
   -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
   top: 50%;
@@ -300,7 +301,7 @@ body a::selection {
 }
 
 .main {
-  margin-top: calc(1rem + 1rem);
+  margin-top: calc(1.5rem + 72px);
 }
 
 @-webkit-keyframes introBackground {
@@ -420,7 +421,7 @@ body a::selection {
 
 .intro .container-fluid {
   position: relative;
-  height: calc(100vh - 72px - 3rem);
+  height: calc(100vh - 72px - 2.5rem);
   background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
   border-radius: 15px;
   margin: 0 1rem;
@@ -1457,6 +1458,95 @@ body a::selection {
 }
 
 @media (max-width: 768px) {
+  .header {
+    bottom: initial;
+    top: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    padding: 0;
+    height: 48px;
+  }
+  .header__logo {
+    padding: 0;
+  }
+  .header__logo svg path,
+  .header__logo svg rect {
+    fill: white;
+  }
+  .header .dg .ac {
+    z-index: 9999;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    -webkit-transition-duration: 600ms;
+            transition-duration: 600ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    max-width: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  .header__nav--entered {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+  .header__nav-list {
+    -webkit-transform: none;
+            transform: none;
+    display: block;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+  .header__nav-link {
+    width: 100%;
+    display: block;
+    font-size: 1.25rem;
+    padding: 16px;
+    text-align: center;
+  }
+  .header .nav-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .nav-toggle--entered .nav-toggle__icon--menu {
+    opacity: 0;
+    -webkit-transform: translate(-10%, -50%);
+            transform: translate(-10%, -50%);
+  }
+  .header .nav-toggle--entered .nav-toggle__icon--close {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  .main {
+    margin-top: calc(2.5rem + 48px);
+  }
   .jobs__img {
     max-height: 50vh;
   }
