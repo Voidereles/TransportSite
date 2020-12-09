@@ -11,7 +11,8 @@ var stickybit = stickybits(".sticky-selector");
 
 $('.intro__carousel').owlCarousel({
     loop: true,
-    dots: true,
+    nav: true,
+    dots: false,
     lazyLoad: true,
     margin: 0,
     responsiveClass: true,

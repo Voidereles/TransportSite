@@ -30,8 +30,7 @@ sans-serif;
 $fontWeightRegular: 400;
 $fontWeightMedium: 500;
 $fontWeightBold: 700;
-$fontSizeH1: 6.625rem;
-$fontSizeH1sub: 4.8rem;
+$fontSizeH1: 4rem;
 $fontSizeH2: 2.375rem;
 $fontSizeH3: 1.625rem;
 $fontSizeBodyL: 1.25rem;
@@ -101,10 +100,6 @@ body {
             color: white;
         }
     }
-}
-
-.container {
-    width: 100%;
 }
 
 .header {
@@ -404,6 +399,11 @@ body {
         top: 0;
         left: 0;
 
+        &-item {
+            position: relative;
+            height: 100%;
+        }
+
         .owl-stage-outer {
             // border-radius:  .0015px;
             height: 100%;
@@ -413,43 +413,82 @@ body {
             }
         }
 
-        .owl-dots {
+        .owl-item {
+            height: 100%;
+        }
+
+        .owl-nav {
             position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 50%;
             width: 100%;
+            transform: translateY(-50%);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
 
-            .owl-dot {
-                border-radius: .0010px;
-                width: 15%;
-                height: 0.75rem;
-                background: white;
-                margin: 0 0.25rem;
+            button.owl-next span,
+            button.owl-prev span,
+            button.owl-dot span {
+                background: transparent;
+                width: 4rem;
+                height: 7rem;
+                margin: 0 1.5rem;
+                background-image: url('../images/chevron-left.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: 0.3s;
+                color: transparent;
+                display: inline-block;
 
-                &:focus {
-                    outline: none;
-                    border: none;
+
+                &:hover {
+                    transform: translate(1.5vmin, 1.5vmin);
                 }
 
-                &.active {
-                    background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
+                &:active {
+                    transform: translate(1.5vmin, 1.5vmin) scale(0.9);
+                }
+            }
+
+            button:focus {
+                outline: none;
+                box-shadow: none;
+                border: none;
+            }
+
+            .owl-nav button.owl-next,
+            .owl-nav button.owl-prev,
+            button.owl-dot {
+
+                &:focus,
+                &:active {
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
+                }
+            }
+
+            button.owl-next span {
+                transform: rotate(180deg);
+
+                &:hover {
+                    transform: rotate(180deg) translate(1.5vmin, 1.5vmin);
+                }
+
+                &:active {
+
+                    transform: rotate(180deg) translate(1.5vmin, 1.5vmin) scale(0.9);
                 }
             }
         }
     }
 
-
     &__img {
         // border-radius:  .0015px;
         width: 100%;
         object-fit: cover;
-        position: relative;
+        position: absolute;
         height: 100vh;
-        top: 0;
-        left: 0;
         background: linear-gradient(45deg, $unitedNationsBlue 30%, $darkGrey 100%);
 
         &::before {
@@ -476,24 +515,24 @@ body {
         }
     }
 
+
     .container {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        z-index: 3;
     }
 
 
     &__heading {
         font-weight: 900;
         color: white;
-        font-size: $fontSizeH1sub;
         position: relative;
         z-index: 2;
         font-size: $fontSizeH1;
         width: 100%;
-        margin-left: 2rem;
         opacity: 0;
         animation: bottomToTop 0.5s forwards 2s;
 
@@ -503,17 +542,21 @@ body {
             height: 100%;
             align-items: center;
         }
+    }
 
-        &--company-name {
-            font-size: $fontSizeH1sub;
-            display: block;
-        }
+    &__subheading {
+        color: white;
+        font-size: $fontSizeBodyL;
+        max-width: 800px;
+        display: block;
+        opacity: 0;
+        animation: bottomToTop 0.5s forwards 2.5s;
     }
 
 
     &__btn {
         // background: $unitedNationsBlue;
-        animation: scaleAndOpacity 0.5s forwards 2.5s;
+        animation: scaleAndOpacity 0.5s forwards 3s;
         transform: scale(0.3);
         opacity: 0;
         border-radius: .008px;
@@ -903,7 +946,7 @@ body {
         color: white;
         font-weight: 900;
         letter-spacing: 0.45px;
-        font-size: $fontSizeH1sub;
+        font-size: $fontSizeH2;
         line-height: 2;
         width: 100%;
         text-align: center;

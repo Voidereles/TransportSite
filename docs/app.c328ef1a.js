@@ -1229,7 +1229,8 @@ new _wow.default().init(); // stickybits(".sticky-selector", {
 var stickybit = (0, _stickybits.default)(".sticky-selector");
 $('.intro__carousel').owlCarousel({
   loop: true,
-  dots: true,
+  nav: true,
+  dots: false,
   lazyLoad: true,
   margin: 0,
   responsiveClass: true,
@@ -1364,7 +1365,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33341" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40673" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

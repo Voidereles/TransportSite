@@ -58,10 +58,6 @@ body a::selection {
   color: white;
 }
 
-.container {
-  width: 100%;
-}
-
 .header {
   position: fixed;
   z-index: 1024;
@@ -458,6 +454,11 @@ body a::selection {
   left: 0;
 }
 
+.intro__carousel-item {
+  position: relative;
+  height: 100%;
+}
+
 .intro__carousel .owl-stage-outer {
   height: 100%;
 }
@@ -466,46 +467,94 @@ body a::selection {
   height: 100%;
 }
 
-.intro__carousel .owl-dots {
+.intro__carousel .owl-item {
+  height: 100%;
+}
+
+.intro__carousel .owl-nav {
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 50%;
   width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.intro__carousel .owl-dots .owl-dot {
-  border-radius: .0010px;
-  width: 15%;
-  height: 0.75rem;
-  background: white;
-  margin: 0 0.25rem;
+.intro__carousel .owl-nav button.owl-next span,
+.intro__carousel .owl-nav button.owl-prev span,
+.intro__carousel .owl-nav button.owl-dot span {
+  background: transparent;
+  width: 4rem;
+  height: 7rem;
+  margin: 0 1.5rem;
+  background-image: url("../images/chevron-left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: transparent;
+  display: inline-block;
 }
 
-.intro__carousel .owl-dots .owl-dot:focus {
+.intro__carousel .owl-nav button.owl-next span:hover,
+.intro__carousel .owl-nav button.owl-prev span:hover,
+.intro__carousel .owl-nav button.owl-dot span:hover {
+  -webkit-transform: translate(1.5vmin, 1.5vmin);
+          transform: translate(1.5vmin, 1.5vmin);
+}
+
+.intro__carousel .owl-nav button.owl-next span:active,
+.intro__carousel .owl-nav button.owl-prev span:active,
+.intro__carousel .owl-nav button.owl-dot span:active {
+  -webkit-transform: translate(1.5vmin, 1.5vmin) scale(0.9);
+          transform: translate(1.5vmin, 1.5vmin) scale(0.9);
+}
+
+.intro__carousel .owl-nav button:focus {
   outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
 }
 
-.intro__carousel .owl-dots .owl-dot.active {
-  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
+.intro__carousel .owl-nav .owl-nav button.owl-next:focus, .intro__carousel .owl-nav .owl-nav button.owl-next:active,
+.intro__carousel .owl-nav .owl-nav button.owl-prev:focus,
+.intro__carousel .owl-nav .owl-nav button.owl-prev:active,
+.intro__carousel .owl-nav button.owl-dot:focus,
+.intro__carousel .owl-nav button.owl-dot:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.intro__carousel .owl-nav button.owl-next span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.intro__carousel .owl-nav button.owl-next span:hover {
+  -webkit-transform: rotate(180deg) translate(1.5vmin, 1.5vmin);
+          transform: rotate(180deg) translate(1.5vmin, 1.5vmin);
+}
+
+.intro__carousel .owl-nav button.owl-next span:active {
+  -webkit-transform: rotate(180deg) translate(1.5vmin, 1.5vmin) scale(0.9);
+          transform: rotate(180deg) translate(1.5vmin, 1.5vmin) scale(0.9);
 }
 
 .intro__img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: relative;
+  position: absolute;
   height: 100vh;
-  top: 0;
-  left: 0;
   background: linear-gradient(45deg, #568BD1 30%, #111111 100%);
 }
 
@@ -547,17 +596,16 @@ body a::selection {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 3;
 }
 
 .intro__heading {
   font-weight: 900;
   color: white;
-  font-size: 4.8rem;
   position: relative;
   z-index: 2;
-  font-size: 6.625rem;
+  font-size: 4rem;
   width: 100%;
-  margin-left: 2rem;
   opacity: 0;
   -webkit-animation: bottomToTop 0.5s forwards 2s;
           animation: bottomToTop 0.5s forwards 2s;
@@ -574,14 +622,19 @@ body a::selection {
           align-items: center;
 }
 
-.intro__heading--company-name {
-  font-size: 4.8rem;
+.intro__subheading {
+  color: white;
+  font-size: 1.25rem;
+  max-width: 800px;
   display: block;
+  opacity: 0;
+  -webkit-animation: bottomToTop 0.5s forwards 2.5s;
+          animation: bottomToTop 0.5s forwards 2.5s;
 }
 
 .intro__btn {
-  -webkit-animation: scaleAndOpacity 0.5s forwards 2.5s;
-          animation: scaleAndOpacity 0.5s forwards 2.5s;
+  -webkit-animation: scaleAndOpacity 0.5s forwards 3s;
+          animation: scaleAndOpacity 0.5s forwards 3s;
   -webkit-transform: scale(0.3);
           transform: scale(0.3);
   opacity: 0;
@@ -1003,7 +1056,7 @@ body a::selection {
   color: white;
   font-weight: 900;
   letter-spacing: 0.45px;
-  font-size: 4.8rem;
+  font-size: 2.375rem;
   line-height: 2;
   width: 100%;
   text-align: center;
