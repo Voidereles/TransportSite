@@ -627,6 +627,8 @@ body a::selection {
   outline: none;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 .intro__btn:hover::before {
