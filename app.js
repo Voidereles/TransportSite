@@ -22,28 +22,27 @@ $('.about__carousel').owlCarousel({
 
 $('.offer__carousel').owlCarousel({
     loop: true,
-    dots: false,
     lazyLoad: true,
     margin: 12,
     responsiveClass: true,
-    autoplay: true,
+    // autoplay: true,
     autoplayHoverPause: true,
-    items: 4,
     responsive: {
-        // breakpoint from 0 up
         0: {
             items: 1,
+            dots: true
         },
-        // breakpoint from 480 up
         480: {
-            items: 2,
+            items: 1,
+            dots: true
         },
-        // breakpoint from 768 up
         768: {
             items: 3,
+            dots: false
         },
         1200: {
-            items: 4,
+            items: 2,
+            dots: false
         }
     },
     autoplayTimeout: 2000
