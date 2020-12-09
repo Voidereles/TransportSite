@@ -70,7 +70,9 @@ body a::selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 1rem;
+  top: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .container-fluid {

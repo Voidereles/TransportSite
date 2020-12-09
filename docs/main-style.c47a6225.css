@@ -71,6 +71,8 @@ body a::selection {
   display: -ms-flexbox;
   display: flex;
   top: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header .container-fluid {
