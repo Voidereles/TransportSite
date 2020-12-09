@@ -26,7 +26,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  background: white;
+  background: #f8f7fd;
   color: black;
 }
 
@@ -58,7 +58,7 @@ body a::selection {
   color: white;
 }
 
-.container-fluid {
+.container {
   width: 100%;
   max-width: 1700px;
 }
@@ -75,7 +75,7 @@ body a::selection {
   transition: 0.5s;
 }
 
-.header .container-fluid {
+.header .container {
   position: relative;
   background: transparent;
   border-radius: 10px;
@@ -89,7 +89,7 @@ body a::selection {
   transition: 0.3s;
 }
 
-.header .container-fluid::before {
+.header .container::before {
   content: '';
   display: block;
   position: absolute;
@@ -106,7 +106,7 @@ body a::selection {
   opacity: 0;
 }
 
-.header .container-fluid.scrolled::before {
+.header .container.scrolled::before {
   opacity: 1;
 }
 
@@ -533,7 +533,7 @@ body a::selection {
   background-position: center;
 }
 
-.intro .container-fluid {
+.intro .container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1334,7 +1334,7 @@ body a::selection {
   color: white;
 }
 
-.newsletter .container-fluid {
+.newsletter .container {
   position: relative;
   min-height: 30vh;
   margin: 0 auto;
@@ -1540,7 +1540,7 @@ body a::selection {
   color: white;
 }
 
-.footer .container-fluid {
+.footer .container {
   border-radius: 15px;
   margin: 0 1rem;
   position: relative;

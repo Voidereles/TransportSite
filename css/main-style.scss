@@ -4,7 +4,7 @@ $blue: #2216af;
 $darkRed: #BB231B;
 $darkGrey: rgb(17, 17, 17);
 
-$bluishWhite:hsl(249, 60%, 98%);
+$bluishWhite:#f8f7fd;
 $libertyPurple: #5F5AB8;
 $unitedNationsBlue: #568BD1;
 
@@ -78,13 +78,12 @@ body {
     font-family: $fontStack;
     font-weight: $fontWeightRegular;
     font-synthesis: none;
-    // color: white;
     border: 0;
     margin: 0;
     overflow-x: hidden;
     position: relative;
     // background-color: black;
-    background: white;
+    background: $bluishWhite;
     color: black;
 
     h1,
@@ -104,7 +103,7 @@ body {
     }
 }
 
-.container-fluid {
+.container {
     width: 100%;
     max-width: 1700px;
 }
@@ -117,11 +116,11 @@ body {
     top: 1rem;
     transition: 0.5s;
 
-    .container-fluid {
+    .container {
         position: relative;
 
         background: transparent;
-        border-radius: 10px;
+        border-radius: .0010px;
         overflow: hidden;
         // animation: leftToRight 0.75s forwards;
         transform: translateY(-100px);
@@ -138,7 +137,7 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 10px;
+            border-radius: .0010px;
             background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             transition: 0.5s;
@@ -262,7 +261,7 @@ body {
         line-height: 1;
         padding: $spaceS;
         margin: $spaceS;
-        border-radius: $spaceXS;
+        border-radius: .00$spaceXS;
         letter-spacing: $spaceLetters;
         transition: $bezierFastoutSlowin 0.36s;
 
@@ -407,7 +406,7 @@ body {
         left: 0;
 
         .owl-stage-outer {
-            // border-radius: 15px;
+            // border-radius:  .0015px;
             height: 100%;
 
             .owl-stage {
@@ -425,7 +424,7 @@ body {
             justify-content: center;
 
             .owl-dot {
-                border-radius: 10px;
+                border-radius: .0010px;
                 width: 15%;
                 height: 0.75rem;
                 background: white;
@@ -445,7 +444,7 @@ body {
 
 
     &__img {
-        // border-radius: 15px;
+        // border-radius:  .0015px;
         width: 100%;
         object-fit: cover;
         position: relative;
@@ -468,7 +467,7 @@ body {
             background: url('../images/logistics-people.jpg');
             background-size: cover;
             background-position: center;
-            // border-radius: 15px;
+            // border-radius:  .0015px;
         }
 
         &-2::before {
@@ -478,7 +477,7 @@ body {
         }
     }
 
-    .container-fluid {
+    .container {
         height: 100%;
         display: flex;
         justify-content: center;
@@ -518,7 +517,7 @@ body {
         animation: scaleAndOpacity 0.5s forwards 2.5s;
         transform: scale(0.3);
         opacity: 0;
-        border-radius: 8px;
+        border-radius: .008px;
         color: white;
         display: inline-block;
         position: relative;
@@ -592,7 +591,7 @@ body {
 
     &__text-container {
         background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
-        border-radius: 15px;
+        border-radius: .0015px;
         min-height: 20vh;
         padding: 1.5rem;
     }
@@ -607,7 +606,7 @@ body {
 
 
         .owl-stage-outer {
-            border-radius: 15px;
+            border-radius: .0015px;
         }
 
         .owl-dots {
@@ -620,7 +619,7 @@ body {
             justify-content: center;
 
             .owl-dot {
-                border-radius: 10px;
+                border-radius: .0010px;
                 width: 15%;
                 height: 0.75rem;
                 background: white;
@@ -640,7 +639,7 @@ body {
     }
 
     &__img {
-        border-radius: 15px;
+        border-radius: .0015px;
         width: 100%;
         object-fit: cover;
         position: relative;
@@ -663,7 +662,7 @@ body {
             background: url('../images/logistics-people.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 15px;
+            border-radius: .0015px;
         }
 
         &-2::before {
@@ -683,7 +682,7 @@ body {
         // background: $darkGrey;
         background: white;
         background: linear-gradient(45deg, $libertyPurple -110%, $unitedNationsBlue 110%);
-        border-radius: 15px;
+        border-radius: .0015px;
         min-height: 30vh;
         padding: 1.5rem;
         display: flex;
@@ -731,7 +730,7 @@ body {
             justify-content: center;
 
             .owl-dot {
-                border-radius: 10px;
+                border-radius: .0010px;
                 width: 100%;
                 height: 0.75rem;
                 background: #111111;
@@ -759,7 +758,7 @@ body {
             // color: white;
             color: black;
             border: 4px solid transparent;
-            border-radius: 10px;
+            border-radius: .0010px;
             transition: 0.3s;
             padding: 1.5rem;
             position: relative;
@@ -781,7 +780,7 @@ body {
                 z-index: -1;
                 margin: 1px;
                 /* !importanté */
-                border-radius: inherit;
+                border-radius: .00inherit;
                 /* !importanté */
                 background: black;
                 transition: 0.3s;
@@ -835,7 +834,7 @@ body {
             transition: 0.3s;
             position: relative;
             color: white;
-            border-radius: 10px;
+            border-radius: .0010px;
             overflow: hidden;
             transition: 0.3s;
             margin-top: auto;
@@ -855,7 +854,7 @@ body {
                 opacity: 0;
                 position: absolute;
                 left: 0;
-                border-radius: 10px;
+                border-radius: .0010px;
                 background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
                 transition: 0.3s;
                 z-index: 1;
@@ -871,7 +870,7 @@ body {
 
 
     &__img {
-        border-radius: 15px;
+        border-radius: .0015px;
         width: 100%;
         object-fit: cover;
         position: relative;
@@ -895,7 +894,7 @@ body {
             background: url('../images/shake-hand.jpeg');
             background-size: cover;
             background-position: center;
-            border-radius: 15px;
+            border-radius: .0015px;
         }
     }
 
@@ -921,7 +920,7 @@ body {
 
     &__item {
         background: $bluishWhite;
-        border-radius: 15px;
+        border-radius: .0015px;
         display: inline-block;
         padding: 1.25rem;
         color: $darkGrey;
@@ -979,7 +978,7 @@ body {
         transition: 0.3s;
         position: relative;
         color: white;
-        border-radius: 10px;
+        border-radius: .0010px;
         overflow: hidden;
         transition: 0.3s;
         background: white;
@@ -1002,7 +1001,7 @@ body {
             opacity: 0;
             position: absolute;
             left: 0;
-            border-radius: 10px;
+            border-radius: .0010px;
             background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
             transition: 0.3s;
             z-index: 1;
@@ -1041,7 +1040,7 @@ body {
     &__text-container {
         background: $darkGrey;
         background: linear-gradient(350deg, $libertyPurple -80%, $unitedNationsBlue 100%);
-        border-radius: 15px;
+        border-radius: .0015px;
         min-height: 30vh;
         padding: 1.5rem;
         display: flex;
@@ -1095,7 +1094,7 @@ body {
         // background: $darkGrey;
         background: white;
         background: linear-gradient(45deg, $unitedNationsBlue -110%, $libertyPurple 110%);
-        border-radius: 15px;
+        border-radius: .0015px;
         min-height: 30vh;
         padding: 1.5rem;
         display: flex;
@@ -1107,7 +1106,7 @@ body {
     }
 
     &__img {
-        border-radius: 15px;
+        border-radius: .0015px;
         width: 100%;
         object-fit: cover;
         position: relative;
@@ -1129,7 +1128,7 @@ body {
             background: url('../images/news.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 15px;
+            border-radius: .0015px;
         }
     }
 
@@ -1138,7 +1137,7 @@ body {
         bottom: 0;
         right: 0;
         padding: 1rem;
-        border-radius: 12px;
+        border-radius: .0012px;
         color: white;
         font-weight: 700;
         font-size: $fontSizeH3;
@@ -1196,12 +1195,12 @@ body {
 .newsletter {
     position: relative;
     transition: 0.7s;
-    border-radius: 15px;
+    border-radius: .0015px;
     display: flex;
     justify-content: center;
     color: white;
 
-    .container-fluid {
+    .container {
         position: relative;
         min-height: 30vh;
         margin: 0 auto;
@@ -1216,7 +1215,7 @@ body {
         align-items: center;
         padding: 1.25rem;
         margin: 0 1rem;
-        border-radius: 15px;
+        border-radius: .0015px;
         background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
 
         &::before {
@@ -1233,7 +1232,7 @@ body {
             background: url('../images/ship.jpeg');
             background-size: cover;
             background-position: bottom left;
-            border-radius: 15px;
+            border-radius: .0015px;
         }
     }
 
@@ -1255,7 +1254,7 @@ body {
     }
 
     &__email {
-        border-radius: 8px;
+        border-radius: .008px;
         color: $darkGrey;
         display: inline-block;
         position: relative;
@@ -1277,7 +1276,7 @@ body {
     }
 
     &__btn {
-        border-radius: 8px;
+        border-radius: .008px;
         color: white;
         display: inline-block;
         position: relative;
@@ -1341,7 +1340,7 @@ body {
         // background: $darkGrey;
         background: white;
         background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
-        border-radius: 15px;
+        border-radius: .0015px;
         min-height: 30vh;
         padding: 1.5rem;
         display: flex;
@@ -1355,7 +1354,7 @@ body {
     &__info-container {
         background: white;
         background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
-        border-radius: 15px;
+        border-radius: .0015px;
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -1372,7 +1371,7 @@ body {
         width: 100%;
         height: 100%;
         min-height: 50vh;
-        border-radius: 15px;
+        border-radius: .0015px;
     }
 }
 
@@ -1384,8 +1383,8 @@ body {
     background: $darkGrey;
     color: white;
 
-    .container-fluid {
-        border-radius: 15px;
+    .container {
+        border-radius: .0015px;
         margin: 0 1rem;
         position: relative;
         padding: 3rem 1rem;
@@ -1449,7 +1448,7 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         padding: 0.25rem 0.5rem;
-        border-radius: 0.5rem;
+        border-radius: .000.5rem;
         transition: 0.3s;
 
         &:hover {

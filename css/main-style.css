@@ -26,7 +26,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  background: white;
+  background: #f8f7fd;
   color: black;
 }
 
@@ -58,7 +58,7 @@ body a::selection {
   color: white;
 }
 
-.container-fluid {
+.container {
   width: 100%;
   max-width: 1700px;
 }
@@ -75,10 +75,10 @@ body a::selection {
   transition: 0.5s;
 }
 
-.header .container-fluid {
+.header .container {
   position: relative;
   background: transparent;
-  border-radius: 10px;
+  border-radius: .0010px;
   overflow: hidden;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
@@ -89,7 +89,7 @@ body a::selection {
   transition: 0.3s;
 }
 
-.header .container-fluid::before {
+.header .container::before {
   content: '';
   display: block;
   position: absolute;
@@ -97,7 +97,7 @@ body a::selection {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: .0010px;
   background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@ body a::selection {
   opacity: 0;
 }
 
-.header .container-fluid.scrolled::before {
+.header .container.scrolled::before {
   opacity: 1;
 }
 
@@ -239,7 +239,7 @@ body a::selection {
   line-height: 1;
   padding: 8px;
   margin: 8px;
-  border-radius: 4px;
+  border-radius: 0 4px;
   letter-spacing: 0.45px;
   -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.36s;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.36s;
@@ -483,7 +483,7 @@ body a::selection {
 }
 
 .intro__carousel .owl-dots .owl-dot {
-  border-radius: 10px;
+  border-radius: .0010px;
   width: 15%;
   height: 0.75rem;
   background: white;
@@ -533,7 +533,7 @@ body a::selection {
   background-position: center;
 }
 
-.intro .container-fluid {
+.intro .container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -586,7 +586,7 @@ body a::selection {
   -webkit-transform: scale(0.3);
           transform: scale(0.3);
   opacity: 0;
-  border-radius: 8px;
+  border-radius: .008px;
   color: white;
   display: inline-block;
   position: relative;
@@ -670,7 +670,7 @@ body a::selection {
 
 .about__text-container {
   background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
-  border-radius: 15px;
+  border-radius: .0015px;
   min-height: 20vh;
   padding: 1.5rem;
 }
@@ -681,7 +681,7 @@ body a::selection {
 }
 
 .about__carousel .owl-stage-outer {
-  border-radius: 15px;
+  border-radius: .0015px;
 }
 
 .about__carousel .owl-dots {
@@ -700,7 +700,7 @@ body a::selection {
 }
 
 .about__carousel .owl-dots .owl-dot {
-  border-radius: 10px;
+  border-radius: .0010px;
   width: 15%;
   height: 0.75rem;
   background: white;
@@ -719,7 +719,7 @@ body a::selection {
 }
 
 .about__img {
-  border-radius: 15px;
+  border-radius: .0015px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -745,7 +745,7 @@ body a::selection {
   background: url("../images/logistics-people.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
+  border-radius: .0015px;
 }
 
 .about__img-2::before {
@@ -762,7 +762,7 @@ body a::selection {
 .offer__text-container {
   background: white;
   background: linear-gradient(45deg, #5F5AB8 -110%, #568BD1 110%);
-  border-radius: 15px;
+  border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
   display: -webkit-box;
@@ -819,7 +819,7 @@ body a::selection {
 }
 
 .offer__carousel .owl-dots .owl-dot {
-  border-radius: 10px;
+  border-radius: .0010px;
   width: 100%;
   height: 0.75rem;
   background: #111111;
@@ -854,7 +854,7 @@ body a::selection {
 .offer__carousel-link {
   color: black;
   border: 4px solid transparent;
-  border-radius: 10px;
+  border-radius: .0010px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 1.5rem;
@@ -882,7 +882,7 @@ body a::selection {
   z-index: -1;
   margin: 1px;
   /* !importanté */
-  border-radius: inherit;
+  border-radius: .00inherit;
   /* !importanté */
   background: black;
   -webkit-transition: 0.3s;
@@ -933,7 +933,7 @@ body a::selection {
   transition: 0.3s;
   position: relative;
   color: white;
-  border-radius: 10px;
+  border-radius: .0010px;
   overflow: hidden;
   transition: 0.3s;
   margin-top: auto;
@@ -955,7 +955,7 @@ body a::selection {
   opacity: 0;
   position: absolute;
   left: 0;
-  border-radius: 10px;
+  border-radius: .0010px;
   background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -967,7 +967,7 @@ body a::selection {
 }
 
 .jobs__img {
-  border-radius: 15px;
+  border-radius: .0015px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -995,7 +995,7 @@ body a::selection {
   background: url("../images/shake-hand.jpeg");
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
+  border-radius: .0015px;
 }
 
 .jobs__subheading {
@@ -1023,7 +1023,7 @@ body a::selection {
 
 .jobs__item {
   background: #f8f7fd;
-  border-radius: 15px;
+  border-radius: .0015px;
   display: inline-block;
   padding: 1.25rem;
   color: #111111;
@@ -1093,7 +1093,7 @@ body a::selection {
   transition: 0.3s;
   position: relative;
   color: white;
-  border-radius: 10px;
+  border-radius: .0010px;
   overflow: hidden;
   transition: 0.3s;
   background: white;
@@ -1119,7 +1119,7 @@ body a::selection {
   opacity: 0;
   position: absolute;
   left: 0;
-  border-radius: 10px;
+  border-radius: .0010px;
   background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1157,7 +1157,7 @@ body a::selection {
 .documents__text-container {
   background: #111111;
   background: linear-gradient(350deg, #5F5AB8 -80%, #568BD1 100%);
-  border-radius: 15px;
+  border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
   display: -webkit-box;
@@ -1212,7 +1212,7 @@ body a::selection {
 .news__text-container {
   background: white;
   background: linear-gradient(45deg, #568BD1 -110%, #5F5AB8 110%);
-  border-radius: 15px;
+  border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
   display: -webkit-box;
@@ -1231,7 +1231,7 @@ body a::selection {
 }
 
 .news__img {
-  border-radius: 15px;
+  border-radius: .0015px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1256,7 +1256,7 @@ body a::selection {
   background: url("../images/news.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
+  border-radius: .0015px;
 }
 
 .news__read-every {
@@ -1264,7 +1264,7 @@ body a::selection {
   bottom: 0;
   right: 0;
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: .0012px;
   color: white;
   font-weight: 700;
   font-size: 1.625rem;
@@ -1324,7 +1324,7 @@ body a::selection {
   position: relative;
   -webkit-transition: 0.7s;
   transition: 0.7s;
-  border-radius: 15px;
+  border-radius: .0015px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1334,7 +1334,7 @@ body a::selection {
   color: white;
 }
 
-.newsletter .container-fluid {
+.newsletter .container {
   position: relative;
   min-height: 30vh;
   margin: 0 auto;
@@ -1351,7 +1351,7 @@ body a::selection {
           align-items: center;
   padding: 1.25rem;
   margin: 0 1rem;
-  border-radius: 15px;
+  border-radius: .0015px;
   background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
 }
 
@@ -1370,7 +1370,7 @@ body a::selection {
   background: url("../images/ship.jpeg");
   background-size: cover;
   background-position: bottom left;
-  border-radius: 15px;
+  border-radius: .0015px;
 }
 
 .newsletter__heading {
@@ -1391,7 +1391,7 @@ body a::selection {
 }
 
 .newsletter__email {
-  border-radius: 8px;
+  border-radius: .008px;
   color: #111111;
   display: inline-block;
   position: relative;
@@ -1415,7 +1415,7 @@ body a::selection {
 }
 
 .newsletter__btn {
-  border-radius: 8px;
+  border-radius: .008px;
   color: white;
   display: inline-block;
   position: relative;
@@ -1481,7 +1481,7 @@ body a::selection {
 .contact__text-container {
   background: white;
   background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
-  border-radius: 15px;
+  border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
   display: -webkit-box;
@@ -1502,7 +1502,7 @@ body a::selection {
 .contact__info-container {
   background: white;
   background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
-  border-radius: 15px;
+  border-radius: .0015px;
   padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1524,7 +1524,7 @@ body a::selection {
   width: 100%;
   height: 100%;
   min-height: 50vh;
-  border-radius: 15px;
+  border-radius: .0015px;
 }
 
 .footer {
@@ -1540,8 +1540,8 @@ body a::selection {
   color: white;
 }
 
-.footer .container-fluid {
-  border-radius: 15px;
+.footer .container {
+  border-radius: .0015px;
   margin: 0 1rem;
   position: relative;
   padding: 3rem 1rem;
@@ -1605,7 +1605,7 @@ body a::selection {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0 0.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
