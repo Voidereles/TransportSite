@@ -1268,7 +1268,7 @@ $('.offer__carousel').owlCarousel({
       dots: false
     },
     1200: {
-      items: 2,
+      items: 4,
       dots: false
     }
   },
@@ -1364,7 +1364,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46465" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38399" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

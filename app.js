@@ -52,7 +52,7 @@ $('.offer__carousel').owlCarousel({
             dots: false
         },
         1200: {
-            items: 2,
+            items: 4,
             dots: false
         }
     },

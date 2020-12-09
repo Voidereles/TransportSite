@@ -98,7 +98,7 @@ body a::selection {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(45deg, #BB231BFF 0%, #2216afFF 100%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.5s;
@@ -447,14 +447,9 @@ body a::selection {
   position: relative;
   -webkit-transition: 0.7s;
   transition: 0.7s;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   width: 100%;
   position: relative;
   height: 100vh;
-  right: -150%;
-  -webkit-animation: rightToLeft 0.75s forwards;
-          animation: rightToLeft 0.75s forwards;
 }
 
 .intro__carousel {
@@ -465,7 +460,6 @@ body a::selection {
 }
 
 .intro__carousel .owl-stage-outer {
-  border-radius: 15px;
   height: 100%;
 }
 
@@ -491,8 +485,8 @@ body a::selection {
 .intro__carousel .owl-dots .owl-dot {
   border-radius: 10px;
   width: 15%;
-  height: 1rem;
-  background: black;
+  height: 0.75rem;
+  background: white;
   margin: 0 0.25rem;
 }
 
@@ -502,11 +496,10 @@ body a::selection {
 }
 
 .intro__carousel .owl-dots .owl-dot.active {
-  background: linear-gradient(45deg, #111111 0%, #BB231B 100%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
 }
 
 .intro__img {
-  border-radius: 15px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -514,7 +507,7 @@ body a::selection {
   height: 100vh;
   top: 0;
   left: 0;
-  background: linear-gradient(45deg, #BB231B 30%, #111111 100%);
+  background: linear-gradient(45deg, #568BD1 30%, #111111 100%);
 }
 
 .intro__img::before {
@@ -532,7 +525,6 @@ body a::selection {
   background: url("/logistics-people.eac0e426.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
 }
 
 .intro__img-2::before {
@@ -617,12 +609,12 @@ body a::selection {
 
 .intro__btn::before {
   content: '';
-  bottom: -50%;
+  bottom: -100%;
   height: 200%;
   width: 100%;
   position: absolute;
   left: 0;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #5F5AB8 -50%, #568BD1 150%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -630,7 +622,7 @@ body a::selection {
 
 .intro__btn:hover {
   color: white;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #5F5AB8 -50%, #568BD1 150%);
   border: none;
   outline: none;
   -webkit-transform: scale(1.1);
@@ -642,12 +634,12 @@ body a::selection {
 }
 
 .big-title {
-  font-size: 10vw;
+  font-size: 2.375rem;
   font-weight: 500;
   margin: 1rem auto;
   display: inline-block;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
-  background: -webkit-linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background: -webkit-linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -667,7 +659,7 @@ body a::selection {
 
 .about {
   color: white;
-  margin-top: 25vh;
+  margin-top: 5rem;
 }
 
 .about__container-helper {
@@ -675,7 +667,7 @@ body a::selection {
 }
 
 .about__text-container {
-  background: linear-gradient(45deg, #111111 0%, #BB231B 100%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
   border-radius: 15px;
   min-height: 20vh;
   padding: 1.5rem;
@@ -708,9 +700,11 @@ body a::selection {
 .about__carousel .owl-dots .owl-dot {
   border-radius: 10px;
   width: 15%;
-  height: 1rem;
-  background: black;
+  height: 0.75rem;
+  background: white;
   margin: 0 0.25rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .about__carousel .owl-dots .owl-dot:focus {
@@ -719,7 +713,7 @@ body a::selection {
 }
 
 .about__carousel .owl-dots .owl-dot.active {
-  background: linear-gradient(45deg, #111111 0%, #BB231B 100%);
+  background: #568BD1;
 }
 
 .about__img {
@@ -731,7 +725,7 @@ body a::selection {
   height: 100%;
   min-height: 70vh;
   max-height: 100vh;
-  background: linear-gradient(45deg, #BB231B 30%, #111111 100%);
+  background: linear-gradient(45deg, #568BD1 30%, #111111 100%);
 }
 
 .about__img::before {
@@ -765,7 +759,7 @@ body a::selection {
 
 .offer__text-container {
   background: white;
-  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+  background: linear-gradient(45deg, #5F5AB8 -110%, #568BD1 110%);
   border-radius: 15px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -825,7 +819,7 @@ body a::selection {
 .offer__carousel .owl-dots .owl-dot {
   border-radius: 10px;
   width: 100%;
-  height: 1rem;
+  height: 0.75rem;
   background: #111111;
   margin: 0 0.25rem;
 }
@@ -836,7 +830,7 @@ body a::selection {
 }
 
 .offer__carousel .owl-dots .owl-dot.active {
-  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
 }
 
 .offer__carousel-item {
@@ -891,7 +885,7 @@ body a::selection {
   background: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
 }
 
 .offer__carousel-link:hover {
@@ -960,22 +954,14 @@ body a::selection {
   position: absolute;
   left: 0;
   border-radius: 10px;
-  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
 }
 
 .jobs {
-  margin-top: 25vh;
-}
-
-.jobs .big-title {
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 60%);
-  background: -webkit-linear-gradient(45deg, #BB231B 0%, #2216af 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-top: 5rem;
 }
 
 .jobs__img {
@@ -987,7 +973,9 @@ body a::selection {
   height: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  background: linear-gradient(45deg, #111111 0%, #2216af 50%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #f8f7fd 100%);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 .jobs__img::before {
@@ -997,7 +985,7 @@ body a::selection {
   left: 0;
   top: 0;
   content: '';
-  opacity: 0.6;
+  opacity: 0.66;
   -webkit-filter: brightness(20%);
           filter: brightness(20%);
   z-index: 0;
@@ -1032,12 +1020,12 @@ body a::selection {
 }
 
 .jobs__item {
-  background: #111111;
+  background: #f8f7fd;
   border-radius: 15px;
   display: inline-block;
   padding: 1.25rem;
-  color: white;
-  border: 4px solid #111111;
+  color: #111111;
+  border: 4px solid #f8f7fd;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
@@ -1074,12 +1062,13 @@ body a::selection {
   margin-right: 1rem;
 }
 
-.jobs__svg path {
-  stroke: white;
+.jobs__svg path,
+.jobs__svg circle {
+  stroke: #111111;
 }
 
 .jobs__item-title {
-  color: white;
+  color: #111111;
   outline: none;
   text-decoration: none;
   letter-spacing: 0.45px;
@@ -1107,6 +1096,7 @@ body a::selection {
   transition: 0.3s;
   background: white;
   margin-top: auto;
+  font-size: 1.125rem;
 }
 
 .jobs__btn-text {
@@ -1128,7 +1118,7 @@ body a::selection {
   position: absolute;
   left: 0;
   border-radius: 10px;
-  background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -1159,12 +1149,12 @@ body a::selection {
 
 .documents {
   color: white;
-  margin-top: 25vh;
+  margin-top: 5rem;
 }
 
 .documents__text-container {
   background: #111111;
-  background: linear-gradient(350deg, #BB231B -80%, #2216af 100%);
+  background: linear-gradient(350deg, #5F5AB8 -80%, #568BD1 100%);
   border-radius: 15px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1199,8 +1189,8 @@ body a::selection {
 .documents__table-container .table thead th,
 .documents__table-container .table td,
 .documents__table-container .table th {
-  border-color: white;
-  color: white;
+  border-color: #111111;
+  color: #111111;
   padding: 0.75rem 1.25rem;
   font-size: 0.75rem;
 }
@@ -1214,7 +1204,28 @@ body a::selection {
 }
 
 .news {
-  margin-top: 25vh;
+  margin-top: 5rem;
+}
+
+.news__text-container {
+  background: white;
+  background: linear-gradient(45deg, #568BD1 -110%, #5F5AB8 110%);
+  border-radius: 15px;
+  min-height: 30vh;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  color: white;
 }
 
 .news__img {
@@ -1225,7 +1236,7 @@ body a::selection {
   position: relative;
   height: 100%;
   height: auto;
-  background: linear-gradient(-375deg, #BB231B 40%, #2216af 110%);
+  background: linear-gradient(-375deg, #5F5AB8 40%, #568BD1 110%);
 }
 
 .news__img::before {
@@ -1268,7 +1279,7 @@ body a::selection {
 
 .news__read-every:hover {
   color: white;
-  background: #2216af;
+  background: #568BD1;
   text-decoration: none;
 }
 
@@ -1294,11 +1305,11 @@ body a::selection {
 
 .news__svg path,
 .news__svg circle {
-  fill: white;
+  fill: #111111;
 }
 
 .news__item-title {
-  color: white;
+  color: #111111;
   outline: none;
   text-decoration: none;
   letter-spacing: 0.45px;
@@ -1339,7 +1350,7 @@ body a::selection {
   padding: 1.25rem;
   margin: 0 1rem;
   border-radius: 15px;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
 }
 
 .newsletter__container::before {
@@ -1398,7 +1409,7 @@ body a::selection {
 
 .newsletter__email:focus {
   outline: none;
-  border: 3px solid #BB231B;
+  border: 3px solid #568BD1;
 }
 
 .newsletter__btn {
@@ -1430,7 +1441,7 @@ body a::selection {
   width: 100%;
   position: absolute;
   left: 0;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -1438,7 +1449,7 @@ body a::selection {
 
 .newsletter__btn:hover {
   color: white;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
   border: none;
   outline: none;
   -webkit-transform: scale(1.1);
@@ -1455,20 +1466,51 @@ body a::selection {
 }
 
 .newsletter__info a {
-  color: #BB231B;
+  color: #568BD1;
   position: relative;
   z-index: 5;
 }
 
 .contact {
   color: white;
-  margin-top: 25vh;
+  margin-top: 5rem;
 }
 
 .contact__text-container {
-  background: #111111;
+  background: white;
+  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  border-radius: 15px;
+  min-height: 30vh;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.contact__info-container {
+  background: white;
+  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
   border-radius: 15px;
   padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  color: white;
 }
 
 .contact__info {
@@ -1521,8 +1563,8 @@ body a::selection {
   font-weight: 700;
   letter-spacing: 0.45px;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
-  background: -webkit-linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background: -webkit-linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1545,7 +1587,7 @@ body a::selection {
 }
 
 .footer__link:hover {
-  color: #BB231B;
+  color: #568BD1;
   text-decoration: none;
   padding-left: 0.5rem;
 }
@@ -1555,8 +1597,8 @@ body a::selection {
   margin: 0 0.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
-  background: -webkit-linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background: -webkit-linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1573,10 +1615,10 @@ body a::selection {
 
 @media (max-width: 1200px) {
   .intro__heading {
-    font-size: 10vw;
+    font-size: 2.375rem;
   }
   .jobs__subheading {
-    font-size: 10vw;
+    font-size: 2.375rem;
   }
   .jobs__img {
     min-height: 30vh;
@@ -1605,9 +1647,6 @@ body a::selection {
   .header__logo svg path,
   .header__logo svg rect {
     fill: white;
-  }
-  .header .dg .ac {
-    z-index: 9999;
   }
   .header__nav {
     position: fixed;
@@ -1677,14 +1716,30 @@ body a::selection {
     -webkit-transform: translate(-50%, -50%) rotate(0);
             transform: translate(-50%, -50%) rotate(0);
   }
-  .main {
-    margin-top: calc(2.5rem + 48px);
-  }
   .jobs__img {
     max-height: 50vh;
   }
+  .jobs__job-container {
+    row-gap: 0.25rem;
+  }
   .offer__carousel-link {
     height: 384px;
+  }
+  .offer__heading-svg {
+    width: 13rem;
+    height: 30rem;
+    position: absolute;
+    top: -15rem;
+    right: -5rem;
+    opacity: 0.8;
+  }
+  .documents__heading-svg {
+    width: 13rem;
+    height: 30rem;
+    position: absolute;
+    top: -15rem;
+    right: -5rem;
+    opacity: 0.8;
   }
 }
 

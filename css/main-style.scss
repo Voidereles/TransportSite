@@ -4,6 +4,10 @@ $blue: #2216af;
 $darkRed: #BB231B;
 $darkGrey: rgb(17, 17, 17);
 
+$bluishWhite:hsl(249, 60%, 98%);
+$libertyPurple: #5F5AB8;
+$unitedNationsBlue: #568BD1;
+
 $lightPeriwinkle:#c6cbd8;
 
 $bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -50,7 +54,7 @@ $space2XL: 48px;
 $space3XL: 64px;
 $space4XL: 96px;
 $space5XL: 128px;
-$section-margin:25vh;
+$section-margin:5rem;
 
 *,
 html {
@@ -135,7 +139,7 @@ body {
             width: 100%;
             height: 100%;
             border-radius: 10px;
-            background: linear-gradient(45deg, #BB231BFF 0%, #2216afFF 100%);
+            background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             transition: 0.5s;
             opacity: 0;
@@ -323,13 +327,6 @@ body {
 
 }
 
-
-.main {
-    // margin-top: calc(1rem + 72px + 1rem);
-    // margin-top: 1.5rem;
-    // margin-top: calc(1.5rem + 72px);
-}
-
 @keyframes introBackground {
     from {
         background-position: top right;
@@ -399,44 +396,9 @@ body {
 .intro {
     position: relative;
     transition: 0.7s;
-    // border-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    // display: flex;
-    // justify-content: center;
     width: 100%;
-    // .container-fluid {
     position: relative;
     height: 100vh;
-    // background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
-    // margin: 0 1rem;
-    // left: -50%;
-    // width: 150%;
-    right: -150%;
-    animation: rightToLeft 0.75s forwards;
-    // padding-left: 50%;
-
-    // &::before {
-    //     content: '';
-    //     width: 100%;
-    //     height: 100%;
-    //     left: 0;
-    //     top: 0;
-    //     content: '';
-    //     opacity: 0.6;
-    //     z-index: 0;
-    //     position: absolute;
-    //     background: url('../images/ship.jpeg');
-    //     background-size: cover;
-    //     background-position: bottom left;
-    //     // border-radius: 15px;
-    //     border-bottom-left-radius: 15px;
-    //     border-bottom-right-radius: 15px;
-    //     // animation: introBackground 2s forwards;
-    // }
-
-    // }
-
 
     &__carousel {
         height: 100%;
@@ -445,7 +407,7 @@ body {
         left: 0;
 
         .owl-stage-outer {
-            border-radius: 15px;
+            // border-radius: 15px;
             height: 100%;
 
             .owl-stage {
@@ -465,8 +427,8 @@ body {
             .owl-dot {
                 border-radius: 10px;
                 width: 15%;
-                height: 1rem;
-                background: black;
+                height: 0.75rem;
+                background: white;
                 margin: 0 0.25rem;
 
                 &:focus {
@@ -475,7 +437,7 @@ body {
                 }
 
                 &.active {
-                    background: linear-gradient(45deg, rgb(17, 17, 17) 0%, $darkRed 100%);
+                    background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
                 }
             }
         }
@@ -483,14 +445,14 @@ body {
 
 
     &__img {
-        border-radius: 15px;
+        // border-radius: 15px;
         width: 100%;
         object-fit: cover;
         position: relative;
         height: 100vh;
         top: 0;
         left: 0;
-        background: linear-gradient(45deg, $darkRed 30%, $darkGrey 100%);
+        background: linear-gradient(45deg, $unitedNationsBlue 30%, $darkGrey 100%);
 
         &::before {
             content: '';
@@ -506,7 +468,7 @@ body {
             background: url('../images/logistics-people.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 15px;
+            // border-radius: 15px;
         }
 
         &-2::before {
@@ -552,7 +514,7 @@ body {
 
 
     &__btn {
-        // background: #2216af;
+        // background: $unitedNationsBlue;
         animation: scaleAndOpacity 0.5s forwards 2.5s;
         transform: scale(0.3);
         opacity: 0;
@@ -576,19 +538,19 @@ body {
 
         &::before {
             content: '';
-            bottom: -50%;
+            bottom: -100%;
             height: 200%;
             width: 100%;
             position: absolute;
             left: 0;
-            background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+            background: linear-gradient(45deg, $libertyPurple -50%, $unitedNationsBlue 150%);
             transition: 0.3s;
             z-index: 1;
         }
 
         &:hover {
             color: white;
-            background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+            background: linear-gradient(45deg, $libertyPurple -50%, $unitedNationsBlue 150%);
             border: none;
             outline: none;
             transform: scale(1.1);
@@ -602,12 +564,12 @@ body {
 
 
 .big-title {
-    font-size: 10vw;
+    font-size: $fontSizeH2;
     font-weight: 500;
     margin: 1rem auto;
     display: inline-block;
-    background: linear-gradient(45deg, $darkRed 0%, $blue 100%);
-    background: -webkit-linear-gradient(45deg, $darkRed 0%, $blue 100%);
+    background: linear-gradient(45deg, $unitedNationsBlue 0%, $libertyPurple 100%);
+    background: -webkit-linear-gradient(45deg, $unitedNationsBlue 0%, $libertyPurple 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -628,7 +590,7 @@ body {
     }
 
     &__text-container {
-        background: linear-gradient(45deg, rgb(17, 17, 17) 0%, $darkRed 100%);
+        background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
         border-radius: 15px;
         min-height: 20vh;
         padding: 1.5rem;
@@ -659,9 +621,10 @@ body {
             .owl-dot {
                 border-radius: 10px;
                 width: 15%;
-                height: 1rem;
-                background: black;
+                height: 0.75rem;
+                background: white;
                 margin: 0 0.25rem;
+                transition: 0.3s;
 
                 &:focus {
                     outline: none;
@@ -669,7 +632,7 @@ body {
                 }
 
                 &.active {
-                    background: linear-gradient(45deg, rgb(17, 17, 17) 0%, $darkRed 100%);
+                    background: $unitedNationsBlue;
                 }
             }
         }
@@ -683,7 +646,7 @@ body {
         height: 100%;
         min-height: 70vh;
         max-height: 100vh;
-        background: linear-gradient(45deg, $darkRed 30%, $darkGrey 100%);
+        background: linear-gradient(45deg, $unitedNationsBlue 30%, $darkGrey 100%);
 
         &::before {
             content: '';
@@ -718,7 +681,7 @@ body {
     &__text-container {
         // background: $darkGrey;
         background: white;
-        background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+        background: linear-gradient(45deg, $libertyPurple -110%, $unitedNationsBlue 110%);
         border-radius: 15px;
         min-height: 30vh;
         padding: 1.5rem;
@@ -769,7 +732,7 @@ body {
             .owl-dot {
                 border-radius: 10px;
                 width: 100%;
-                height: 1rem;
+                height: 0.75rem;
                 background: #111111;
                 margin: 0 0.25rem;
 
@@ -779,7 +742,7 @@ body {
                 }
 
                 &.active {
-                    background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+                    background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
                 }
             }
         }
@@ -821,7 +784,7 @@ body {
                 /* !importanté */
                 background: black;
                 transition: 0.3s;
-                background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+                background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
             }
 
             &:hover {
@@ -892,7 +855,7 @@ body {
                 position: absolute;
                 left: 0;
                 border-radius: 10px;
-                background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+                background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
                 transition: 0.3s;
                 z-index: 1;
             }
@@ -904,13 +867,7 @@ body {
 .jobs {
     margin-top: $section-margin;
 
-    .big-title {
-        background: linear-gradient(45deg, $darkRed 0%, $blue 60%);
-        background: -webkit-linear-gradient(45deg, $darkRed 0%, $blue 60%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+
 
     &__img {
         border-radius: 15px;
@@ -920,7 +877,8 @@ body {
         height: 100%;
         min-height: 100vh;
         max-height: 100vh;
-        background: linear-gradient(45deg, $darkGrey 0%, $blue 50%);
+        background: linear-gradient(45deg, $libertyPurple 0%, $bluishWhite 100%);
+        filter: brightness(120%);
 
         &::before {
             content: '';
@@ -929,7 +887,7 @@ body {
             left: 0;
             top: 0;
             content: '';
-            opacity: 0.6;
+            opacity: 0.66;
             filter: brightness(20%);
             z-index: 0;
             position: absolute;
@@ -961,12 +919,12 @@ body {
     }
 
     &__item {
-        background: $darkGrey;
+        background: $bluishWhite;
         border-radius: 15px;
         display: inline-block;
         padding: 1.25rem;
-        color: white;
-        border: 4px solid $darkGrey;
+        color: $darkGrey;
+        border: 4px solid $bluishWhite;
         transition: 0.3s;
         position: relative;
         display: flex;
@@ -991,13 +949,14 @@ body {
         height: 2rem;
         margin-right: 1rem;
 
-        path {
-            stroke: white;
+        path,
+        circle {
+            stroke: $darkGrey;
         }
     }
 
     &__item-title {
-        color: white;
+        color: $darkGrey;
         outline: none;
         text-decoration: none;
         letter-spacing: 0.45px;
@@ -1024,6 +983,7 @@ body {
         transition: 0.3s;
         background: white;
         margin-top: auto;
+        font-size: $fontSizeBodyM;
 
         &-text {
             color: black;
@@ -1042,7 +1002,7 @@ body {
             position: absolute;
             left: 0;
             border-radius: 10px;
-            background: linear-gradient(45deg, #111111 -110%, #2216af 110%);
+            background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
             transition: 0.3s;
             z-index: 1;
         }
@@ -1079,7 +1039,7 @@ body {
 
     &__text-container {
         background: $darkGrey;
-        background: linear-gradient(350deg, #BB231B -80%, #2216af 100%);
+        background: linear-gradient(350deg, $libertyPurple -80%, $unitedNationsBlue 100%);
         border-radius: 15px;
         min-height: 30vh;
         padding: 1.5rem;
@@ -1109,8 +1069,8 @@ body {
         .table thead th,
         .table td,
         .table th {
-            border-color: white;
-            color: white;
+            border-color: $darkGrey;
+            color: $darkGrey;
             padding: 0.75rem 1.25rem;
             font-size: 0.75rem;
         }
@@ -1130,6 +1090,21 @@ body {
 
     margin-top: $section-margin;
 
+    &__text-container {
+        // background: $darkGrey;
+        background: white;
+        background: linear-gradient(45deg, $unitedNationsBlue -110%, $libertyPurple 110%);
+        border-radius: 15px;
+        min-height: 30vh;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+
     &__img {
         border-radius: 15px;
         width: 100%;
@@ -1137,7 +1112,7 @@ body {
         position: relative;
         height: 100%;
         height: auto;
-        background: linear-gradient(-375deg, #BB231B 40%, #2216af 110%);
+        background: linear-gradient(-375deg, $libertyPurple 40%, $unitedNationsBlue 110%);
 
         &::before {
             content: '';
@@ -1177,7 +1152,7 @@ body {
 
         &:hover {
             color: white;
-            background: #2216af;
+            background: $unitedNationsBlue;
             text-decoration: none;
         }
 
@@ -1202,12 +1177,12 @@ body {
 
         path,
         circle {
-            fill: white;
+            fill: $darkGrey;
         }
     }
 
     &__item-title {
-        color: white;
+        color: $darkGrey;
         outline: none;
         text-decoration: none;
         letter-spacing: 0.45px;
@@ -1241,7 +1216,7 @@ body {
         padding: 1.25rem;
         margin: 0 1rem;
         border-radius: 15px;
-        background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+        background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
 
         &::before {
             content: '';
@@ -1296,7 +1271,7 @@ body {
 
         &:focus {
             outline: none;
-            border: 3px solid $darkRed;
+            border: 3px solid $unitedNationsBlue;
         }
     }
 
@@ -1326,14 +1301,14 @@ body {
             width: 100%;
             position: absolute;
             left: 0;
-            background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+            background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
             transition: 0.3s;
             z-index: 1;
         }
 
         &:hover {
             color: white;
-            background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+            background: linear-gradient(45deg, $libertyPurple 0%, $unitedNationsBlue 100%);
             border: none;
             outline: none;
             transform: scale(1.1);
@@ -1349,7 +1324,7 @@ body {
         z-index: 2;
 
         a {
-            color: $darkRed;
+            color: $unitedNationsBlue;
             position: relative;
             z-index: 5;
         }
@@ -1360,10 +1335,31 @@ body {
     color: white;
     margin-top: $section-margin;
 
+
     &__text-container {
-        background: $darkGrey;
+        // background: $darkGrey;
+        background: white;
+        background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
+        border-radius: 15px;
+        min-height: 30vh;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+
+    &__info-container {
+        background: white;
+        background: linear-gradient(45deg, #111111 -110%, $unitedNationsBlue 110%);
         border-radius: 15px;
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        color: white;
     }
 
     &__info {
@@ -1412,8 +1408,8 @@ body {
         font-weight: 700;
         letter-spacing: 0.45px;
         text-transform: uppercase;
-        background: linear-gradient(45deg, $darkRed 0%, $blue 100%);
-        background: -webkit-linear-gradient(45deg, $darkRed 0%, $blue 100%);
+        background: linear-gradient(45deg, $unitedNationsBlue 0%, $libertyPurple 100%);
+        background: -webkit-linear-gradient(45deg, $unitedNationsBlue 0%, $libertyPurple 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1435,7 +1431,7 @@ body {
         transition: 0.3s;
 
         &:hover {
-            color: $darkRed;
+            color: $unitedNationsBlue;
             text-decoration: none;
             padding-left: 0.5rem;
         }
@@ -1446,8 +1442,8 @@ body {
         margin: 0 0.5rem;
         font-weight: 600;
         text-transform: uppercase;
-        background: linear-gradient(45deg, $darkRed 0%, $blue 100%);
-        background: -webkit-linear-gradient(45deg, $darkRed 0%, $blue 100%);
+        background: linear-gradient(45deg, $unitedNationsBlue 0%, $libertyPurple 100%);
+        background: -webkit-linear-gradient(45deg, $unitedNationsBlue 0%, $libertyPurple 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1464,13 +1460,13 @@ body {
 @media (max-width:1200px) {
     .intro {
         &__heading {
-            font-size: 10vw;
+            font-size: $fontSizeH2;
         }
     }
 
     .jobs {
         &__subheading {
-            font-size: 10vw;
+            font-size: $fontSizeH2;
         }
 
         &__img {
@@ -1505,11 +1501,6 @@ body {
             svg rect {
                 fill: white;
             }
-        }
-
-
-        .dg .ac {
-            z-index: 9999;
         }
 
         &__nav {
@@ -1570,19 +1561,39 @@ body {
         }
     }
 
-    .main {
-        margin-top: calc(2.5rem + 48px);
-    }
-
     .jobs {
         &__img {
             max-height: 50vh;
+        }
+
+        &__job-container {
+            row-gap: 0.25rem;
         }
     }
 
     .offer {
         &__carousel-link {
             height: 384px;
+        }
+
+        &__heading-svg {
+            width: 13rem;
+            height: 30rem;
+            position: absolute;
+            top: -15rem;
+            right: -5rem;
+            opacity: 0.8;
+        }
+    }
+
+    .documents {
+        &__heading-svg {
+            width: 13rem;
+            height: 30rem;
+            position: absolute;
+            top: -15rem;
+            right: -5rem;
+            opacity: 0.8;
         }
     }
 }
