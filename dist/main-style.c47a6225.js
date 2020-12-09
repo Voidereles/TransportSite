@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\ship.jpeg":[["ship.006159e2.jpeg","images/ship.jpeg"],"images/ship.jpeg"],"./..\\images\\logistics-people.jpg":[["logistics-people.eac0e426.jpg","images/logistics-people.jpg"],"images/logistics-people.jpg"],"./..\\images\\shake-hand.jpeg":[["shake-hand.49268da0.jpeg","images/shake-hand.jpeg"],"images/shake-hand.jpeg"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/20592/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/20592/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\images\\ship.jpeg":[["ship.006159e2.jpeg","images/ship.jpeg"],"images/ship.jpeg"],"./..\\images\\logistics-people.jpg":[["logistics-people.eac0e426.jpg","images/logistics-people.jpg"],"images/logistics-people.jpg"],"./..\\images\\shake-hand.jpeg":[["shake-hand.49268da0.jpeg","images/shake-hand.jpeg"],"images/shake-hand.jpeg"],"./..\\images\\news.jpg":[["news.ad6808ae.jpg","images/news.jpg"],"images/news.jpg"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/20592/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/20592/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

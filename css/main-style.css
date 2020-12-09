@@ -22,7 +22,7 @@ body {
   font-family: Montserrat, Gotham, system-ui, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, メイリオ, Meiryo, Segoe UI, sans-serif;
   font-weight: 400;
   font-synthesis: none;
-  color: black;
+  color: white;
   border: 0;
   margin: 0;
   overflow-x: hidden;
@@ -1040,6 +1040,351 @@ body a::selection {
 
 .documents__table-container .table thead tr th:last-child {
   width: 100%;
+}
+
+.news {
+  margin-top: 25vh;
+}
+
+.news__img {
+  border-radius: 15px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  height: 100%;
+  height: auto;
+  background: linear-gradient(-375deg, #BB231B 40%, #2216af 110%);
+}
+
+.news__img::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: '';
+  opacity: 0.6;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  z-index: 0;
+  position: absolute;
+  background: url("../images/news.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.news__read-every {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.625rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 70px;
+  transition: 0.3s;
+  overflow: hidden;
+  background: transparent;
+  text-align: right;
+}
+
+.news__read-every:hover {
+  color: white;
+  background: linear-gradient(45deg, #BB231B -10%, #2216af 110%);
+  text-decoration: none;
+}
+
+.news__place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news__place-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.news__svg {
+  display: block;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.news__svg path,
+.news__svg circle {
+  fill: white;
+}
+
+.news__item-title {
+  color: white;
+  outline: none;
+  text-decoration: none;
+  letter-spacing: 0.45px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.newsletter {
+  position: relative;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsletter .container-fluid {
+  position: relative;
+  min-height: 30vh;
+  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  border-radius: 15px;
+  margin: 0 1rem;
+}
+
+.newsletter .container-fluid::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: '';
+  opacity: 0.6;
+  z-index: 0;
+  -webkit-filter: brightness(25%);
+          filter: brightness(25%);
+  position: absolute;
+  background: url("../images/ship.jpeg");
+  background-size: cover;
+  background-position: bottom left;
+  border-radius: 15px;
+}
+
+.newsletter__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter__heading {
+  font-weight: 700;
+  letter-spacing: 0.45px;
+}
+
+.newsletter__subheading {
+  font-weight: 500;
+  color: white;
+  font-size: 1.125rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.newsletter__email {
+  border-radius: 8px;
+  color: #111111;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.45px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: white;
+  min-width: 200px;
+  border: 3px solid white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+          box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.newsletter__email:focus {
+  outline: none;
+  border: 3px solid #BB231B;
+}
+
+.newsletter__btn {
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.45px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+          box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.newsletter__btn-text {
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.newsletter__btn::before {
+  content: '';
+  bottom: -50%;
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.newsletter__btn:hover {
+  color: white;
+  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  border: none;
+  outline: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.newsletter__btn:hover::before {
+  bottom: 0;
+}
+
+.newsletter__info a {
+  color: #BB231B;
+}
+
+.contact {
+  color: white;
+  margin-top: 25vh;
+}
+
+.contact__text-container {
+  background: #111111;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.contact__info {
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.contact__map {
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
+  border-radius: 15px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 15px;
+  background: #111111;
+}
+
+.footer .container-fluid {
+  border-radius: 15px;
+  margin: 0 1rem;
+  position: relative;
+  padding: 3rem 1rem;
+}
+
+.footer__logo {
+  max-height: 10vh;
+  width: 100%;
+}
+
+.footer__logo svg {
+  height: 100px;
+  width: 100%;
+}
+
+.footer__logo svg path,
+.footer__logo svg rect {
+  fill: white;
+}
+
+.footer__heading {
+  font-weight: 700;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: -webkit-linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer__ul {
+  padding-left: 0;
+}
+
+.footer__li {
+  list-style: none;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.footer__link {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: #BB231B;
+  text-decoration: none;
+  padding-left: 0.5rem;
+}
+
+.footer__author-name {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background: -webkit-linear-gradient(45deg, #BB231B 0%, #2216af 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__author-name:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 1200px) {
