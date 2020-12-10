@@ -1287,7 +1287,7 @@ function headerOnScroll() {
       $('.header .container').addClass('scrolled');
 
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header").style.top = "16px";
+        document.getElementById("header").style.top = "0";
       } else {
         document.getElementById("header").style.top = "-145px";
       }

@@ -1287,7 +1287,7 @@ function headerOnScroll() {
       $('.header .container').addClass('scrolled');
 
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header").style.top = "16px";
+        document.getElementById("header").style.top = "0";
       } else {
         document.getElementById("header").style.top = "-145px";
       }
@@ -1365,7 +1365,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45953" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34779" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
