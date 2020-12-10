@@ -219,16 +219,11 @@ body a::selection {
 }
 
 .header .container {
-  height: 110px;
+  min-height: 110px;
   position: relative;
   background: transparent;
   border-radius: .0010px;
   overflow: hidden;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
-  opacity: 0;
-  -webkit-animation: topToBottom 0.75s forwards 0.75s;
-          animation: topToBottom 0.75s forwards 0.75s;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -253,10 +248,15 @@ body a::selection {
 .header .container.scrolled {
   -webkit-box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+  margin-top: 0.75rem;
 }
 
 .header .container.scrolled::before {
   opacity: 1;
+}
+
+.header .container.scrolled .nav-toggle svg path {
+  fill: black;
 }
 
 .header .container.scrolled .header {
@@ -340,7 +340,7 @@ body a::selection {
 }
 
 .header .nav-toggle svg path {
-  fill: #111111;
+  fill: white;
   -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 }
@@ -1867,6 +1867,10 @@ body a::selection {
     width: calc(100% - 2rem);
     padding: 0;
     height: 48px;
+  }
+  .header .container {
+    margin-top: 0.75rem;
+    min-height: initial;
   }
   .header__logo {
     padding: 0;

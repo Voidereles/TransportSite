@@ -57,15 +57,11 @@ body {
     transition: 0.5s;
 
     .container {
-        height: 110px;
+        min-height: 110px;
         position: relative;
         background: transparent;
         border-radius: .0010px;
         overflow: hidden;
-        // animation: leftToRight 0.75s forwards;
-        transform: translateY(-100px);
-        opacity: 0;
-        animation: topToBottom 0.75s forwards 0.75s;
         transition: 0.3s;
 
         &::before {
@@ -85,10 +81,15 @@ body {
 
         &.scrolled {
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+            margin-top: 0.75rem;
 
             &::before {
                 // top: 0;
                 opacity: 1;
+            }
+
+            .nav-toggle svg path {
+                fill: black;
             }
 
             .header {
@@ -101,6 +102,8 @@ body {
                         fill: $darkGrey;
                     }
                 }
+
+
 
                 &__nav-icon-link,
                 &__nav-link {
@@ -173,7 +176,7 @@ body {
             height: 28px;
 
             path {
-                fill: $darkGrey;
+                fill: white;
                 transition: $bezierFastoutSlowin 0.5s;
             }
         }
@@ -1562,6 +1565,11 @@ body {
         width: calc(100% - 2rem);
         padding: 0;
         height: 48px;
+
+        .container {
+            margin-top: 0.75rem;
+            min-height: initial;
+        }
 
         &__logo {
             padding: 0;
