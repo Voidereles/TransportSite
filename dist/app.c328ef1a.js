@@ -1284,7 +1284,7 @@ function headerOnScroll() {
     var currentScrollPos = window.pageYOffset;
 
     if (this.window.pageYOffset > 105) {
-      $('.header .container-fluid').addClass('scrolled');
+      $('.header .container').addClass('scrolled');
 
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("header").style.top = "16px";
@@ -1294,7 +1294,7 @@ function headerOnScroll() {
 
       prevScrollpos = currentScrollPos;
     } else {
-      $('.header .container-fluid').removeClass('scrolled');
+      $('.header .container').removeClass('scrolled');
     }
   };
 }

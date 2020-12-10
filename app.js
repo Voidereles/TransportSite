@@ -66,7 +66,7 @@ function headerOnScroll() {
         console.log('dasd');
         let currentScrollPos = window.pageYOffset;
         if (this.window.pageYOffset > 105) {
-            $('.header .container-fluid').addClass('scrolled');
+            $('.header .container').addClass('scrolled');
 
 
             if (prevScrollpos > currentScrollPos) {
@@ -76,7 +76,7 @@ function headerOnScroll() {
             }
             prevScrollpos = currentScrollPos;
         } else {
-            $('.header .container-fluid').removeClass('scrolled');
+            $('.header .container').removeClass('scrolled');
         }
     }
 }

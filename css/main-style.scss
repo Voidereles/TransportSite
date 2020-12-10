@@ -1,59 +1,5 @@
-$yellow: #FEE140;
-$pink: #FA709A;
-$blue: #2216af;
-$darkRed: #BB231B;
-$darkGrey: rgb(17, 17, 17);
-
-$bluishWhite:#f8f7fd;
-$libertyPurple: #5F5AB8;
-$unitedNationsBlue: #568BD1;
-
-$lightPeriwinkle:#c6cbd8;
-
-$bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
-$durationXS: 200ms;
-$durationS: 300ms;
-$durationM: 400ms;
-$durationL: 600ms;
-$durationXL: 800ms;
-$fontStack: Montserrat,
-Gotham,
-system-ui,
--apple-system,
-BlinkMacSystemFont,
-San Francisco,
-Segoe UI,
-メイリオ,
-Meiryo,
-Segoe UI,
-sans-serif;
-$fontWeightRegular: 400;
-$fontWeightMedium: 500;
-$fontWeightBold: 700;
-$fontSizeH1: 4rem;
-$fontSizeH2: 2.375rem;
-$fontSizeH3: 1.625rem;
-$fontSizeBodyL: 1.25rem;
-$fontSizeBodyM: 1.125rem;
-$fontSizeBodyS: 1rem;
-$fontSizeBodyXS: 0.8rem;
-$spaceLetters:0.45px;
-$lineHeightTitle: 1.1;
-$lineHeightBody: 1.5;
-$maxWidthS: 480px;
-$maxWidthM: 640px;
-$maxWidthL: 1096px;
-$spaceOuter: 64px;
-$spaceXS: 4px;
-$spaceS: 8px;
-$spaceM: 16px;
-$spaceL: 24px;
-$spaceXL: 32px;
-$space2XL: 48px;
-$space3XL: 64px;
-$space4XL: 96px;
-$space5XL: 128px;
-$section-margin:5rem;
+@import 'predefinied-classes.scss';
+@import 'animations.scss';
 
 *,
 html {
@@ -82,7 +28,7 @@ body {
     overflow-x: hidden;
     position: relative;
     // background-color: black;
-    background: $bluishWhite;
+    background: white;
     color: black;
 
     h1,
@@ -112,7 +58,6 @@ body {
 
     .container {
         position: relative;
-
         background: transparent;
         border-radius: .0010px;
         overflow: hidden;
@@ -121,7 +66,6 @@ body {
         opacity: 0;
         animation: topToBottom 0.75s forwards 0.75s;
         transition: 0.3s;
-
 
         &::before {
             content: '';
@@ -139,6 +83,8 @@ body {
         }
 
         &.scrolled {
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+
             &::before {
                 // top: 0;
                 opacity: 1;
@@ -255,7 +201,7 @@ body {
         line-height: 1;
         padding: $spaceS;
         margin: $spaceS;
-        border-radius: .00$spaceXS;
+        border-radius: 0;
         letter-spacing: $spaceLetters;
         transition: $bezierFastoutSlowin 0.36s;
 
@@ -320,72 +266,6 @@ body {
 
 }
 
-@keyframes introBackground {
-    from {
-        background-position: top right;
-    }
-
-    to {
-        background-position: bottom left;
-    }
-}
-
-@keyframes leftToRight {
-    from {
-        left: -150%;
-    }
-
-    to {
-        left: 0;
-    }
-}
-
-@keyframes rightToLeft {
-    from {
-        right: -150%;
-    }
-
-    to {
-        right: 0;
-    }
-}
-
-@keyframes bottomToTop {
-    from {
-        bottom: -25%;
-        opacity: 0;
-    }
-
-    to {
-        bottom: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes topToBottom {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes scaleAndOpacity {
-    from {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 .intro {
     position: relative;
     transition: 0.7s;
@@ -424,6 +304,7 @@ body {
             transform: translateY(-50%);
             display: flex;
             justify-content: space-between;
+            z-index: 1;
 
             button.owl-next span,
             button.owl-prev span,
@@ -432,21 +313,22 @@ body {
                 width: 4rem;
                 height: 7rem;
                 margin: 0 1.5rem;
-                background-image: url('../images/chevron-left.svg');
+                background-image: url('../images/right-chevron-tiny.svg');
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
                 transition: 0.3s;
                 color: transparent;
                 display: inline-block;
+                transform: rotate(180deg);
 
 
                 &:hover {
-                    transform: translate(1.5vmin, 1.5vmin);
+                    transform: rotate(180deg) translate(-1vmin, - 1vmin);
                 }
 
                 &:active {
-                    transform: translate(1.5vmin, 1.5vmin) scale(0.9);
+                    transform: rotate(180deg) translate(-1vmin, -1vmin) scale(0.9);
                 }
             }
 
@@ -469,15 +351,15 @@ body {
             }
 
             button.owl-next span {
-                transform: rotate(180deg);
+                transform: rotate(0deg);
 
                 &:hover {
-                    transform: rotate(180deg) translate(1.5vmin, 1.5vmin);
+                    transform: rotate(0deg) translate(-1vmin, 1vmin);
                 }
 
                 &:active {
 
-                    transform: rotate(180deg) translate(1.5vmin, 1.5vmin) scale(0.9);
+                    transform: rotate(0deg) translate(-1vmin, 1vmin) scale(0.9);
                 }
             }
         }
@@ -522,7 +404,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        z-index: 3;
+        z-index: 10;
     }
 
 
@@ -534,7 +416,7 @@ body {
         font-size: $fontSizeH1;
         width: 100%;
         opacity: 0;
-        animation: bottomToTop 0.5s forwards 2s;
+        animation: bottomToTop 0.5s forwards 0.25s;
 
         &-container {
             width: 100%;
@@ -550,57 +432,151 @@ body {
         max-width: 800px;
         display: block;
         opacity: 0;
-        animation: bottomToTop 0.5s forwards 2.5s;
+        animation: bottomToTop 0.5s forwards .75s;
     }
-
 
     &__btn {
         // background: $unitedNationsBlue;
-        animation: scaleAndOpacity 0.5s forwards 3s;
+        animation: scaleAndOpacity 0.5s forwards 1.25s;
         transform: scale(0.3);
         opacity: 0;
         border-radius: .008px;
         color: white;
         display: inline-block;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
         z-index: 3;
-        padding: 1rem 2rem;
+        padding: 0;
         letter-spacing: 0.45px;
         border: none;
         transition: 0.3s;
         box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
+        //delete this under
+
         &-text {
-            position: relative;
             z-index: 2;
             font-weight: 500;
-        }
-
-        &::before {
-            content: '';
-            bottom: -100%;
-            height: 200%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            background: linear-gradient(45deg, $libertyPurple -50%, $unitedNationsBlue 150%);
+            display: block;
+            position: relative;
+            overflow: hidden;
+            line-height: 64px;
             transition: 0.3s;
-            z-index: 1;
+            padding: 0 2rem;
+
+            &::before {
+                content: '';
+                bottom: -100%;
+                height: 200%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                background: linear-gradient(45deg, $libertyPurple -50%, $unitedNationsBlue 150%);
+                transition: 0.3s;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: white;
+                background: linear-gradient(45deg, $libertyPurple -50%, $unitedNationsBlue 150%);
+                border: none;
+                outline: none;
+                filter: brightness(120%);
+
+                &::before {
+                    bottom: 0;
+                }
+
+
+            }
         }
 
         &:hover {
-            color: white;
-            background: linear-gradient(45deg, $libertyPurple -50%, $unitedNationsBlue 150%);
-            border: none;
-            outline: none;
-            transform: scale(1.1);
-            filter: brightness(120%);
 
-            &::before {
-                bottom: 0;
+            .border-helper-top-right,
+            .border-helper-bottom-left {
+                &::before {
+                    width: calc(100% + 4px);
+                }
+
+                &::after {
+                    height: calc(100% + 4px);
+                }
             }
         }
+
+        .border-helper-top-right,
+        .border-helper-bottom-left {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.16s;
+
+            &::before,
+            &::after {
+                content: '';
+                background: white;
+                position: absolute;
+                transition: 0.16s;
+                top: -2px;
+            }
+
+            &::before {
+                height: 2px;
+                width: 0%;
+                left: -2px;
+            }
+
+            &::after {
+                height: 0%;
+                width: 2px;
+                right: -2px;
+                transition-delay: 0.16s;
+            }
+        }
+
+        .border-helper-bottom-left {
+
+            &::before,
+            &::after {
+                content: '';
+                background: white;
+                position: absolute;
+                transition: 0.16s;
+                bottom: -2px;
+                top: initial;
+            }
+
+            &::before {
+                right: -2px;
+                left: initial;
+                transition-delay: 0.32s;
+            }
+
+            &::after {
+                right: initial;
+                left: -2px;
+                transition-delay: 0.48s;
+            }
+        }
+    }
+
+    .offer__carousel-btn {
+        width: auto;
+
+        &:hover {
+            &::before {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+
+    .jobs__btn {
+        width: auto;
     }
 }
 
@@ -663,7 +639,7 @@ body {
             .owl-dot {
                 border-radius: .0010px;
                 width: 15%;
-                height: 0.75rem;
+                height: 0.5rem;
                 background: white;
                 margin: 0 0.25rem;
                 transition: 0.3s;
@@ -749,6 +725,15 @@ body {
     }
 
     &__carousel {
+        .owl-stage {
+            display: flex;
+        }
+
+        .owl-item {
+            display: flex;
+            flex: 1 0 auto;
+        }
+
         .owl-item.active {
             .offer__carousel-link {
                 // color: white;
@@ -774,7 +759,7 @@ body {
             .owl-dot {
                 border-radius: .0010px;
                 width: 100%;
-                height: 0.75rem;
+                height: 0.5rem;
                 background: #111111;
                 margin: 0 0.25rem;
 
@@ -809,8 +794,8 @@ body {
             background-clip: padding-box;
             display: flex;
             flex-direction: column;
-            height: 312px;
             width: 100%;
+            height: 100%;
 
             &::before {
                 content: '';
@@ -865,6 +850,7 @@ body {
             color: black;
             outline: none;
             text-decoration: none;
+            font-size: $fontSizeBodyL;
         }
 
         &-btn {
@@ -885,6 +871,7 @@ body {
                 color: white;
                 position: relative;
                 z-index: 2;
+                font-size: $fontSizeBodyM;
             }
 
             &::before {
@@ -954,7 +941,7 @@ body {
 
     &__job-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-auto-rows: fit-content(1em);
         column-gap: 1.5rem;
         row-gap: 1.5rem;
@@ -971,6 +958,7 @@ body {
         position: relative;
         display: flex;
         flex-direction: column;
+        box-shadow: $shadow-md;
 
         &:hover {
             transform: scale(1.05);
@@ -1600,6 +1588,12 @@ body {
                     transform: translate(-50%, -50%) rotate(0);
                 }
             }
+        }
+    }
+
+    .intro {
+        &__carousel .owl-nav {
+            top: 90%;
         }
     }
 
