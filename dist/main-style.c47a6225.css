@@ -19,6 +19,63 @@
           box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
+.triangle-btn {
+  position: relative;
+  padding: 0.5rem 35px;
+  border: 1px solid #fa4612;
+  border-radius: 0.25rem;
+  background: white;
+  color: white;
+  font-weight: 500;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.triangle-btn::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0px;
+  height: 0px;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 16px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.triangle-btn::before {
+  content: '';
+  background: #fa4612;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border-radius: 0.25rem;
+}
+
+.triangle-btn:hover {
+  color: #fa4612;
+  background: white;
+}
+
+.triangle-btn:hover::after {
+  border-left: 16px solid #fa4612;
+}
+
+.triangle-btn:hover::before {
+  width: 0%;
+}
+
 @-webkit-keyframes introBackground {
   from {
     background-position: top right;
@@ -433,7 +490,7 @@ body a::selection {
   width: 0%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background-image: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
 }
 
 .header__nav-icons {
@@ -518,6 +575,12 @@ body a::selection {
 .intro__carousel-item {
   position: relative;
   height: 100%;
+}
+
+.intro__carousel .triangle-btn {
+  padding: 1rem 65px;
+  margin: 0;
+  font-size: 1.25rem;
 }
 
 .intro__carousel .owl-stage-outer {
@@ -619,7 +682,7 @@ body a::selection {
      object-fit: cover;
   position: absolute;
   height: 100vh;
-  background: linear-gradient(45deg, #568BD1 30%, #111111 100%);
+  background: linear-gradient(45deg, #fa4612 30%, #111111 100%);
 }
 
 .intro__img::before {
@@ -735,7 +798,7 @@ body a::selection {
   width: 100%;
   position: absolute;
   left: 0;
-  background: linear-gradient(45deg, #5F5AB8 -50%, #568BD1 150%);
+  background: linear-gradient(45deg, #fa4612 -50%, #fa4612 150%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: -1;
@@ -743,7 +806,7 @@ body a::selection {
 
 .intro__btn-text:hover {
   color: white;
-  background: linear-gradient(45deg, #5F5AB8 -50%, #568BD1 150%);
+  background: linear-gradient(45deg, #fa4612 -50%, #fa4612 150%);
   border: none;
   outline: none;
   -webkit-filter: brightness(120%);
@@ -846,8 +909,8 @@ body a::selection {
   font-weight: 500;
   margin: 1rem auto;
   display: inline-block;
-  background: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
-  background: -webkit-linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
+  background: -webkit-linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -875,7 +938,7 @@ body a::selection {
 }
 
 .about__text-container {
-  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   border-radius: .0015px;
   min-height: 20vh;
   padding: 1.5rem;
@@ -921,7 +984,7 @@ body a::selection {
 }
 
 .about__carousel .owl-dots .owl-dot.active {
-  background: #568BD1;
+  background: #fa4612;
 }
 
 .about__img {
@@ -933,7 +996,7 @@ body a::selection {
   height: 100%;
   min-height: 70vh;
   max-height: 100vh;
-  background: linear-gradient(45deg, #568BD1 30%, #111111 100%);
+  background: linear-gradient(45deg, #fa4612 30%, #111111 100%);
 }
 
 .about__img::before {
@@ -967,7 +1030,7 @@ body a::selection {
 
 .offer__text-container {
   background: white;
-  background: linear-gradient(45deg, #5F5AB8 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #fa4612 -110%, #fa4612 110%);
   border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1053,7 +1116,7 @@ body a::selection {
 }
 
 .offer__carousel .owl-dots .owl-dot.active {
-  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
 }
 
 .offer__carousel-item {
@@ -1108,7 +1171,7 @@ body a::selection {
   background: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
 }
 
 .offer__carousel-link:hover {
@@ -1179,7 +1242,7 @@ body a::selection {
   position: absolute;
   left: 0;
   border-radius: .0010px;
-  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -1198,7 +1261,7 @@ body a::selection {
   height: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  background: linear-gradient(45deg, #5F5AB8 0%, #f8f7fd 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #f8f7fd 100%);
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }
@@ -1345,7 +1408,7 @@ body a::selection {
   position: absolute;
   left: 0;
   border-radius: .0010px;
-  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -1381,7 +1444,7 @@ body a::selection {
 
 .documents__text-container {
   background: #111111;
-  background: linear-gradient(350deg, #5F5AB8 -80%, #568BD1 100%);
+  background: linear-gradient(350deg, #fa4612 -80%, #fa4612 100%);
   border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1436,7 +1499,7 @@ body a::selection {
 
 .news__text-container {
   background: white;
-  background: linear-gradient(45deg, #568BD1 -110%, #5F5AB8 110%);
+  background: linear-gradient(45deg, #fa4612 -110%, #fa4612 110%);
   border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1463,7 +1526,7 @@ body a::selection {
   position: relative;
   height: 100%;
   height: auto;
-  background: linear-gradient(-375deg, #5F5AB8 40%, #568BD1 110%);
+  background: linear-gradient(-375deg, #fa4612 40%, #fa4612 110%);
 }
 
 .news__img::before {
@@ -1506,7 +1569,7 @@ body a::selection {
 
 .news__read-every:hover {
   color: white;
-  background: #568BD1;
+  background: #fa4612;
   text-decoration: none;
 }
 
@@ -1577,7 +1640,7 @@ body a::selection {
   padding: 1.25rem;
   margin: 0 1rem;
   border-radius: .0015px;
-  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
 }
 
 .newsletter__container::before {
@@ -1636,7 +1699,7 @@ body a::selection {
 
 .newsletter__email:focus {
   outline: none;
-  border: 3px solid #568BD1;
+  border: 3px solid #fa4612;
 }
 
 .newsletter__btn {
@@ -1668,7 +1731,7 @@ body a::selection {
   width: 100%;
   position: absolute;
   left: 0;
-  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 1;
@@ -1676,7 +1739,7 @@ body a::selection {
 
 .newsletter__btn:hover {
   color: white;
-  background: linear-gradient(45deg, #5F5AB8 0%, #568BD1 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   border: none;
   outline: none;
   -webkit-transform: scale(1.1);
@@ -1693,7 +1756,7 @@ body a::selection {
 }
 
 .newsletter__info a {
-  color: #568BD1;
+  color: #fa4612;
   position: relative;
   z-index: 5;
 }
@@ -1705,7 +1768,7 @@ body a::selection {
 
 .contact__text-container {
   background: white;
-  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
   border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1726,7 +1789,7 @@ body a::selection {
 
 .contact__info-container {
   background: white;
-  background: linear-gradient(45deg, #111111 -110%, #568BD1 110%);
+  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
   border-radius: .0015px;
   padding: 1.5rem;
   display: -webkit-box;
@@ -1790,8 +1853,8 @@ body a::selection {
   font-weight: 700;
   letter-spacing: 0.45px;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
-  background: -webkit-linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
+  background: -webkit-linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1814,7 +1877,7 @@ body a::selection {
 }
 
 .footer__link:hover {
-  color: #568BD1;
+  color: #fa4612;
   text-decoration: none;
   padding-left: 0.5rem;
 }
@@ -1824,8 +1887,8 @@ body a::selection {
   margin: 0 0.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
-  background: -webkit-linear-gradient(45deg, #568BD1 0%, #5F5AB8 100%);
+  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
+  background: -webkit-linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -16,7 +16,7 @@ $('.intro__carousel').owlCarousel({
     lazyLoad: true,
     margin: 0,
     responsiveClass: true,
-    autoplay: true,
+    // autoplay: true,
     autoplayHoverPause: true,
     items: 1
 });
@@ -50,10 +50,6 @@ $('.offer__carousel').owlCarousel({
         },
         768: {
             items: 3,
-            dots: false
-        },
-        1200: {
-            items: 4,
             dots: false
         }
     },

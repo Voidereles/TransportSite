@@ -1234,7 +1234,7 @@ $('.intro__carousel').owlCarousel({
   lazyLoad: true,
   margin: 0,
   responsiveClass: true,
-  autoplay: true,
+  // autoplay: true,
   autoplayHoverPause: true,
   items: 1
 });
@@ -1266,10 +1266,6 @@ $('.offer__carousel').owlCarousel({
     },
     768: {
       items: 3,
-      dots: false
-    },
-    1200: {
-      items: 4,
       dots: false
     }
   },
@@ -1365,7 +1361,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42481" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41951" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
