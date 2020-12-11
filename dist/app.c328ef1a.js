@@ -1333,7 +1333,7 @@ $(document).ready(function () {
     $('.nav-toggle').toggleClass('nav-toggle--entered');
   });
 });
-},{"wow.js":"node_modules/wow.js/dist/wow.js","stickybits":"node_modules/stickybits/dist/stickybits.es.js"}],"../../../../AppData/Roaming/npm-cache/_npx/1560/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"wow.js":"node_modules/wow.js/dist/wow.js","stickybits":"node_modules/stickybits/dist/stickybits.es.js"}],"../../../../AppData/Roaming/npm-cache/_npx/7232/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1361,7 +1361,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61646" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64172" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -1537,5 +1537,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/1560/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/7232/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map

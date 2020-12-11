@@ -204,12 +204,16 @@
                     <div class="col-12 col-md-6">
 
 
-                        <div class="about__text-container sticky-selector mt-1 mt-lg-4  shadow-2xl">
-
+                        <div class="about__text-container sticky-selector mt-1 mt-lg-4">
+                            <h6 class="about__subheading">Poznaj nas</h6>
                             <h2 class="about__heading">W czym możemy Ci pomóc?</h2>
                             <p class="about__p">W naszej firmie funkcjonują działy dedykowane różnym specjalizacjom.
                                 Poznaj
                                 nas bliżej i dowiedz się, co możemy Ci zaoferować.</p>
+                            <p class="about__p">W naszej firmie funkcjonują działy dedykowane różnym specjalizacjom.
+                                Poznaj
+                                nas bliżej i dowiedz się, co możemy Ci zaoferować.</p>
+
 
 
                         </div>
@@ -232,9 +236,9 @@
         <section class="offer mt-1 mt-lg-4">
             <div class="container">
 
-                <div class="offer__text-container  shadow-xl">
-                    <h2 class="about__heading">Oferta spedycyjna</h2>
+                <div class="offer__text-container">
                     <h6 class="about__subheading">Zawsze na czas.</h6>
+                    <h2 class="about__heading">Oferta spedycyjna</h2>
                     <svg class="offer__heading-svg" height="512" viewBox="0 0 512 512" width="512"
                         xmlns="http://www.w3.org/2000/svg">
                         <g id="Outline">
@@ -253,7 +257,7 @@
                 </div>
                 <div class="offer__carousel owl-carousel mt-1 mt-lg-4">
                     <div class="offer__carousel-item">
-                        <a class="offer__carousel-link" href="#">
+                        <a class="offer__carousel-link shadow-xl" href="#">
                             <svg class="offer__carousel-svg" width="65" height="38" viewBox="0 0 65 38" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -319,7 +323,7 @@
                     </div>
 
                     <div class="offer__carousel-item">
-                        <a class="offer__carousel-link" href="#">
+                        <a class="offer__carousel-link shadow-xl" href="#">
                             <svg class="offer__carousel-svg" width="65" height="38" viewBox="0 0 65 38" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -385,7 +389,7 @@
                     </div>
 
                     <div class="offer__carousel-item">
-                        <a class="offer__carousel-link" href="#">
+                        <a class="offer__carousel-link shadow-xl" href="#">
                             <svg class="offer__carousel-svg" width="65" height="38" viewBox="0 0 65 38" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -652,9 +656,9 @@
 
         <section class="news">
             <div class="container">
-                <div class="news__text-container shadow-xl">
-                    <h2 class="about__heading">Nowości</h2>
+                <div class="news__text-container">
                     <h6 class="about__subheading">Lorem ipsum dolor.</h6>
+                    <h2 class="about__heading">Nowości</h2>
                 </div>
                 <div class="row mt-1 mt-lg-4">
 
@@ -915,8 +919,12 @@
                         <form class="w-100 d-flex align-items-around flex-column flex-lg-row my-3">
                             <input class="newsletter__email my-2 my-lg-0 mr-lg-2" type="email" name="email" id="email"
                                 aria-label="email">
-                            <a class="btn btn-lg newsletter__btn my-2 my-lg-0 ml-lg-2" href="#">
-                                <span class="newsletter__btn-text">Zapisz się</span></a>
+                            <!-- <a class="btn btn-lg newsletter__btn my-2 my-lg-0 ml-lg-2" href="#">
+                                <span class="newsletter__btn-text">Zapisz się</span></a> -->
+
+                            <button type="submit" class="btn triangle-btn mt-4 mt-lg-0 ml-lg-3" href="#">
+                                Dowiedz się więcej
+                            </button>
                         </form>
                         <p class="newsletter__info">Klikając "Zapisz się", zgadzasz się na <a href="#">warunki</a>.
                         </p>
@@ -930,17 +938,17 @@
 
         <section class="contact">
             <div class="container">
-                <div class="news__text-container shadow-xl">
+                <div class="contact__text-container text-center">
                     <h2 class="about__heading">Kontakt</h2>
                     <h6 class="about__subheading">Lorem ipsum dolor.</h6>
                 </div>
                 <div class="row mt-1 mt-lg-4">
-                    <div class="col-12 col-lg-5 mb-1 mb-lg-0">
+                    <div class="col-12 col-lg-12 mb-1 mb-lg-0">
 
 
-                        <div class="contact__info-container sticky-selector shadow-xl">
+                        <div class="contact__info-container sticky-selector">
 
-                            <h2 class="about__heading mb-3">Siedziba główna</h2>
+                            <h2 class="mb-3">Siedziba główna</h2>
                             <div class="contact__info">ul. Dużej kasy 28</div>
                             <div class="contact__info">81-366 Gdynia</div>
                             <div class="contact__info">NIP: 5858585858</div>
@@ -951,7 +959,7 @@
                         </div>
 
                     </div>
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-12">
                         <iframe class="contact__map shadow-xl"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.184890117958!2d-1.442503988963876!3d50.93879367589565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487474342c8b7971%3A0x98c559aea183e119!2s32%20Outer%20Cir%2C%20Southampton%20SO16%205GF%2C%20Wielka%20Brytania!5e0!3m2!1spl!2spl!4v1607468388644!5m2!1spl!2spl"
                             width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
@@ -965,10 +973,10 @@
         <section class="documents">
             <div class="container">
 
-                <div class="documents__text-container shadow-lg">
+                <div class="documents__text-container">
                     <h2 class="about__heading">Dokumenty</h2>
                     <h6 class="about__subheading">Wszystko czego potrzebujesz.</h6>
-                    <svg class="documents__heading-svg" id="Capa_1" enable-background="new 0 0 512 512" height="512"
+                    <!-- <svg class="documents__heading-svg" id="Capa_1" enable-background="new 0 0 512 512" height="512"
                         viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -982,7 +990,7 @@
                             <path
                                 d="m286 392h-120c-8.284 0-15 6.716-15 15s6.716 15 15 15h120c8.284 0 15-6.716 15-15s-6.716-15-15-15z" />
                         </g>
-                    </svg>
+                    </svg> -->
                 </div>
                 <div class="documents__table-container my-1 my-lg-4 mx-2">
                     <table class="table table-responsive">

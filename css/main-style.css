@@ -938,7 +938,6 @@ body a::selection {
 }
 
 .about__text-container {
-  background: linear-gradient(45deg, #fa4612 0%, #fa4612 100%);
   border-radius: .0015px;
   min-height: 20vh;
   padding: 1.5rem;
@@ -947,6 +946,17 @@ body a::selection {
 .about__heading, .about__subheading {
   position: relative;
   z-index: 2;
+  color: #24416b;
+  font-weight: 700;
+}
+
+.about__subheading {
+  color: #fa4612;
+}
+
+.about__p {
+  color: #111111;
+  font-size: 0.8rem;
 }
 
 .about__carousel .owl-stage-outer {
@@ -1029,8 +1039,6 @@ body a::selection {
 }
 
 .offer__text-container {
-  background: white;
-  background: linear-gradient(45deg, #fa4612 -110%, #fa4612 110%);
   border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1046,6 +1054,15 @@ body a::selection {
           justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  text-align: center;
+}
+
+.offer__heading, .offer__subheading {
+  position: relative;
+  z-index: 2;
+  color: #24416b;
+  text-align: center;
+  font-weight: 700;
 }
 
 .offer__heading-svg {
@@ -1054,6 +1071,7 @@ body a::selection {
   position: absolute;
   top: -4rem;
   right: 1rem;
+  display: none;
 }
 
 .offer__heading-svg path,
@@ -1133,11 +1151,11 @@ body a::selection {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem 0.25rem;
 }
 
 .offer__carousel-link {
   color: black;
-  border: 4px solid transparent;
   border-radius: .0010px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1157,7 +1175,6 @@ body a::selection {
 }
 
 .offer__carousel-link::before {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -1190,6 +1207,10 @@ body a::selection {
           transform: scale(1);
 }
 
+.offer__carousel-link:hover .offer__carousel-btn-text {
+  color: White;
+}
+
 .offer__carousel-svg {
   display: block;
   height: 3rem;
@@ -1198,11 +1219,13 @@ body a::selection {
 
 .offer__carousel-svg path {
   stroke: black;
+  stroke: #fa4612;
 }
 
 .offer__carousel-item-title {
   text-align: center;
-  color: black;
+  color: #24416b;
+  font-weight: 700;
   outline: none;
   text-decoration: none;
   font-size: 1.25rem;
@@ -1213,19 +1236,20 @@ body a::selection {
   border: none;
   outline: none;
   color: white;
-  background: #111111;
+  background: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
-  color: white;
+  color: #fa4612;
   border-radius: .0010px;
   overflow: hidden;
   transition: 0.3s;
   margin-top: auto;
+  border-radius: 0.25rem;
 }
 
 .offer__carousel-btn-text {
-  color: white;
+  color: #fa4612;
   position: relative;
   z-index: 2;
   font-size: 1.125rem;
@@ -1273,9 +1297,9 @@ body a::selection {
   left: 0;
   top: 0;
   content: '';
-  opacity: 0.66;
-  -webkit-filter: brightness(20%);
-          filter: brightness(20%);
+  opacity: 0.56;
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
   z-index: 0;
   position: absolute;
   background: url("../images/shake-hand.jpeg");
@@ -1288,7 +1312,7 @@ body a::selection {
   position: absolute;
   top: 0;
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.45px;
   font-size: 2.375rem;
   line-height: 2;
@@ -1308,12 +1332,11 @@ body a::selection {
 }
 
 .jobs__item {
-  background: #f8f7fd;
+  background: white;
   border-radius: .0015px;
   display: inline-block;
   padding: 1.25rem;
   color: #111111;
-  border: 4px solid #f8f7fd;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
@@ -1381,7 +1404,7 @@ body a::selection {
   transition: 0.3s;
   position: relative;
   color: white;
-  border-radius: .0010px;
+  border-radius: .25rem;
   overflow: hidden;
   transition: 0.3s;
   background: white;
@@ -1443,10 +1466,7 @@ body a::selection {
 }
 
 .documents__text-container {
-  background: #111111;
-  background: linear-gradient(350deg, #fa4612 -80%, #fa4612 100%);
   border-radius: .0015px;
-  min-height: 30vh;
   padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1498,8 +1518,6 @@ body a::selection {
 }
 
 .news__text-container {
-  background: white;
-  background: linear-gradient(45deg, #fa4612 -110%, #fa4612 110%);
   border-radius: .0015px;
   min-height: 30vh;
   padding: 1.5rem;
@@ -1691,7 +1709,7 @@ body a::selection {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: white;
-  min-width: 200px;
+  min-width: 320px;
   border: 3px solid white;
   -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
           box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -1767,10 +1785,7 @@ body a::selection {
 }
 
 .contact__text-container {
-  background: white;
-  background: linear-gradient(45deg, #111111 -110%, #fa4612 110%);
   border-radius: .0015px;
-  min-height: 30vh;
   padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1906,6 +1921,9 @@ body a::selection {
 @media (max-width: 1200px) {
   .intro__heading {
     font-size: 2.375rem;
+  }
+  .intro .intro__carousel .owl-nav {
+    top: 75%;
   }
   .jobs__subheading {
     font-size: 2.375rem;
